@@ -1,5 +1,8 @@
 import Image from "next/image";
 import { Divider } from "@/components/Divider";
+import { IndexUniversos } from "@/components/home/IndexUniversos";
+import { MapaCatalunya } from "@/components/home/MapaCatalunya";
+import { MarcaDistintiu } from "@/components/home/MarcaDistintiu";
 
 // Fotografia provisional: Ben Steele, Torroja del Priorat (Unsplash License).
 // https://unsplash.com/photos/zZcvA-y90bY. Substituir per fotografia pròpia.
@@ -33,22 +36,21 @@ const criteris = [
   },
 ];
 
-const universos = [
+const distintius = [
   {
-    nom: "La Taula",
-    text: "Hotels on la gastronomia és part essencial de l'experiència.",
+    nivell: 1 as const,
+    nom: "Sojorn Selection",
+    text: "Hotel seleccionat per Sojorn.",
   },
   {
-    nom: "El Paisatge",
-    text: "Hotels que tenen una relació extraordinària amb el seu entorn.",
+    nivell: 2 as const,
+    nom: "Sojorn Signature",
+    text: "Un hotel especialment singular per la seva identitat, hospitalitat i vinculació amb el territori.",
   },
   {
-    nom: "La Història",
-    text: "Hotels on arquitectura, patrimoni i cultura formen part del viatge.",
-  },
-  {
-    nom: "El Silenci",
-    text: "Hotels per desaparèixer durant un cap de setmana.",
+    nivell: 3 as const,
+    nom: "Sojorn Icon",
+    text: "Hotels extraordinaris que representen una experiència excepcional dins del territori català.",
   },
 ];
 
@@ -84,7 +86,7 @@ export default function Home() {
             Dormir en un lloc. Viure un territori.
           </p>
           <a
-            href="#universos"
+            href="#catalunya"
             className="group mt-12 inline-flex animate-entrada items-center border border-paper/30 bg-bosc px-6 py-4 text-center text-ui tracking-[0.14em] text-paper uppercase transition-colors duration-200 ease-sojorn [animation-delay:300ms] hover:border-paper/70 sm:px-8 sm:whitespace-nowrap"
           >
             <span className="relative">
@@ -93,7 +95,7 @@ export default function Home() {
               <span aria-hidden="true"> ]</span>
               <span
                 aria-hidden="true"
-                className="absolute inset-x-0 -bottom-1.5 h-px origin-left scale-x-0 bg-paper transition-transform duration-500 ease-sojorn group-hover:scale-x-100 group-focus-visible:scale-x-100"
+                className="absolute inset-x-0 -bottom-1.5 h-px origin-left scale-x-0 bg-paper transition-transform duration-500 ease-sojorn group-hover:scale-x-100 group-focus-visible:scale-x-100 motion-reduce:scale-x-100 motion-reduce:opacity-0 motion-reduce:transition-opacity motion-reduce:duration-200 motion-reduce:group-hover:opacity-100 motion-reduce:group-focus-visible:opacity-100"
               />
             </span>
           </a>
@@ -120,6 +122,7 @@ export default function Home() {
             </p>
             <p className="mt-6 max-w-[42ch]">
               Sojorn neix per descobrir, seleccionar i connectar aquests llocs.
+              Hotels amb identitat, arrelats al seu entorn.
             </p>
           </div>
 
@@ -139,53 +142,118 @@ export default function Home() {
               ))}
             </ul>
             <Divider on="bosc" />
+            <p className="mt-12 max-w-[30ch] font-serif text-entradeta italic">
+              El distintiu Sojorn no és una categoria. És una garantia de
+              criteri.
+            </p>
           </div>
         </div>
       </section>
 
-      <section id="universos" aria-labelledby="universos-titol">
+      <section id="guia" aria-labelledby="guia-titol">
         <div className="mx-auto max-w-pagina px-marge py-seccio">
-          <h2 id="universos-titol">Els universos</h2>
+          <h2 id="guia-titol" className="max-w-[20ch]">
+            No volem ser una llista d&apos;hotels.{" "}
+            <em>Volem ser una referència.</em>
+          </h2>
+          <p className="mt-8 max-w-[46ch] text-oliva">
+            En un món on tot es pot reservar, comparar i valorar, creiem que
+            encara hi ha espai per al criteri. Per això Sojorn no busca tenir la
+            selecció més gran. Busca tenir la selecció adequada.
+          </p>
 
-          <ul className="mt-16">
-            {universos.map((univers) => (
-              <li key={univers.nom}>
-                <Divider />
-                <div className="grid grid-cols-12 gap-x-6 gap-y-4 py-10 md:py-14">
-                  <h3 className="col-span-12 text-h1 md:col-span-8">
-                    {univers.nom}
-                  </h3>
-                  <p className="col-span-12 max-w-[34ch] text-oliva md:col-span-4 md:col-start-9 md:self-center">
-                    {univers.text}
-                  </p>
-                </div>
-              </li>
-            ))}
-          </ul>
-          <Divider />
+          <div className="mt-24 grid grid-cols-12 gap-x-6 gap-y-10">
+            <div className="col-span-12 lg:col-span-3">
+              <h3 className="text-h4">La Guia Sojorn</h3>
+              <p className="mt-3 max-w-[28ch] text-meta text-oliva">
+                Una selecció independent d&apos;hotels amb encant a Catalunya.
+              </p>
+            </div>
+            <dl className="col-span-12 grid border-t md:grid-cols-3 lg:col-span-9">
+              {distintius.map((distintiu) => {
+                const excepcional = distintiu.nivell === 3;
+                return (
+                  <div
+                    key={distintiu.nom}
+                    className="border-b py-8 last:border-b-0 md:border-b-0 md:px-8 md:first:pl-0 md:[&:not(:first-child)]:border-l"
+                  >
+                    <dt>
+                      <MarcaDistintiu
+                        nivell={distintiu.nivell}
+                        contorn={excepcional}
+                        className="text-terracota"
+                      />
+                      <span className="mt-4 block text-ui tracking-[0.14em] uppercase">
+                        {distintiu.nom}
+                      </span>
+                    </dt>
+                    <dd className="mt-3 max-w-[30ch] text-oliva">
+                      {distintiu.text}
+                      {excepcional ? (
+                        <span className="mt-3 block text-meta">
+                          Només per a casos molt especials.
+                        </span>
+                      ) : null}
+                    </dd>
+                  </div>
+                );
+              })}
+            </dl>
+          </div>
         </div>
       </section>
 
-      <section aria-label="La idea central">
-        <div className="mx-auto max-w-pagina px-marge py-seccio-amplia">
-          <p className="mx-auto max-w-[24ch] text-center font-serif text-h2 text-balance">
-            No seleccionem hotels perquè són bons.{" "}
-            <em>
-              Els seleccionem perquè expliquen alguna cosa del lloc on són.
-            </em>
+      <section id="catalunya" aria-labelledby="catalunya-titol">
+        <div className="mx-auto max-w-pagina px-marge pb-seccio">
+          <Divider className="mb-seccio" />
+          <h2 id="catalunya-titol" className="max-w-[18ch]">
+            Un petit territori.{" "}
+            <em>Una infinitat de maneres de viure&apos;l.</em>
+          </h2>
+          <div className="mt-16">
+            <MapaCatalunya />
+          </div>
+          <p className="mt-12 text-meta text-oliva">
+            Cartografia: Institut Cartogràfic i Geològic de Catalunya (CC BY
+            4.0)
           </p>
         </div>
       </section>
 
-      <footer className="mx-auto w-full max-w-pagina px-marge">
-        <Divider />
-        <div className="flex flex-col gap-3 py-12 sm:flex-row sm:items-baseline sm:justify-between">
-          <span className="font-serif text-h5 font-normal tracking-[0.24em]">SOJORN</span>
-          <span className="text-meta text-oliva">
-            Una guia d&apos;hotels amb encant a Catalunya.
-          </span>
+      <section id="universos" aria-labelledby="universos-titol">
+        <div className="mx-auto max-w-pagina px-marge pb-seccio">
+          <Divider className="mb-seccio" />
+          <h2 id="universos-titol">Els universos</h2>
+          <div className="mt-16">
+            <IndexUniversos />
+          </div>
         </div>
-      </footer>
+      </section>
+
+      <div className="bg-bosc text-paper selection:bg-paper selection:text-bosc">
+        <section aria-label="La idea central">
+          <div className="mx-auto max-w-pagina px-marge py-seccio-amplia">
+            <p className="mx-auto max-w-[24ch] text-center font-serif text-h2 text-balance">
+              No seleccionem hotels perquè són bons.{" "}
+              <em>
+                Els seleccionem perquè expliquen alguna cosa del lloc on són.
+              </em>
+            </p>
+          </div>
+        </section>
+
+        <footer className="mx-auto w-full max-w-pagina px-marge">
+          <Divider on="bosc" />
+          <div className="flex flex-col gap-3 py-12 sm:flex-row sm:items-baseline sm:justify-between">
+            <span className="font-serif text-h5 font-normal tracking-[0.24em]">
+              SOJORN
+            </span>
+            <span className="text-meta text-pedra-200">
+              Una guia d&apos;hotels amb encant a Catalunya.
+            </span>
+          </div>
+        </footer>
+      </div>
     </main>
   );
 }
