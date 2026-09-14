@@ -10,6 +10,7 @@ export const TERRITORIS: Territori[] = [
   {
     id: "emporda",
     nom: "Empordà",
+    ambPreposicio: "a l'Empordà",
     comarques: "Alt Empordà i Baix Empordà",
     text: "Mar, vinyes, pedra i una cuina que mira al Mediterrani.",
     imatge: {
@@ -22,6 +23,7 @@ export const TERRITORIS: Territori[] = [
   {
     id: "garrotxa",
     nom: "Garrotxa",
+    ambPreposicio: "a la Garrotxa",
     comarques: "Garrotxa",
     text: "Volcans, fagedes, pobles de pedra i una gastronomia arrelada.",
     imatge: {
@@ -34,6 +36,7 @@ export const TERRITORIS: Territori[] = [
   {
     id: "pirineus",
     nom: "Pirineus",
+    ambPreposicio: "als Pirineus",
     comarques: "Val d'Aran, Alta Ribagorça, Pallars, Alt Urgell i Cerdanya",
     text: "Muntanya, silenci, romànic i camins.",
     imatge: {
@@ -46,6 +49,7 @@ export const TERRITORIS: Territori[] = [
   {
     id: "priorat",
     nom: "Priorat",
+    ambPreposicio: "al Priorat",
     comarques: "Priorat",
     text: "Vinyes impossibles, pedra seca i paisatges que expliquen el vi.",
     imatge: {
@@ -58,6 +62,7 @@ export const TERRITORIS: Territori[] = [
   {
     id: "penedes",
     nom: "Penedès",
+    ambPreposicio: "al Penedès",
     comarques: "Alt Penedès, Baix Penedès i Garraf",
     text: "Una terra de vinyes, cava i cultura vitivinícola.",
     imatge: {
@@ -70,6 +75,7 @@ export const TERRITORIS: Territori[] = [
   {
     id: "ebre",
     nom: "Terres de l'Ebre",
+    ambPreposicio: "a les Terres de l'Ebre",
     comarques: "Baix Ebre, Montsià, Ribera d'Ebre i Terra Alta",
     text: "Riu, delta, arrossars, mar i una identitat pròpia.",
     imatge: {

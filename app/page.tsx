@@ -1,58 +1,16 @@
 import Image from "next/image";
+import { BotoBosc } from "@/components/BotoBosc";
 import { Divider } from "@/components/Divider";
 import { IndexUniversos } from "@/components/home/IndexUniversos";
 import { MapaCatalunya } from "@/components/home/MapaCatalunya";
 import { MarcaDistintiu } from "@/components/home/MarcaDistintiu";
+import { Peu } from "@/components/Peu";
+import { CRITERIS as criteris, DISTINTIUS as distintius } from "@/lib/guia";
 
 // Fotografia provisional: Ben Steele, Torroja del Priorat (Unsplash License).
 // https://unsplash.com/photos/zZcvA-y90bY. Substituir per fotografia pròpia.
 const HERO_SRC =
   "https://images.unsplash.com/photo-1515348961751-c17112eca1fd?fm=jpg&q=75&w=2400&fit=crop";
-
-const criteris = [
-  {
-    nom: "Identitat",
-    text: "Hotels amb personalitat pròpia, arquitectura, història o una manera singular d'entendre l'hospitalitat.",
-  },
-  {
-    nom: "Hospitalitat",
-    text: "Espais on el servei, l'atenció i els petits detalls formen part de l'experiència.",
-  },
-  {
-    nom: "Territori",
-    text: "Hotels profundament connectats amb el lloc on es troben.",
-  },
-  {
-    nom: "Autenticitat",
-    text: "Experiències i propostes que neixen del territori i no simplement es reprodueixen.",
-  },
-  {
-    nom: "Excel·lència",
-    text: "Un estàndard de qualitat que justifica formar part de la selecció.",
-  },
-  {
-    nom: "Compromís",
-    text: "Respecte pel paisatge, la cultura, el producte local i l'entorn.",
-  },
-];
-
-const distintius = [
-  {
-    nivell: 1 as const,
-    nom: "Sojorn Selection",
-    text: "Hotel seleccionat per Sojorn.",
-  },
-  {
-    nivell: 2 as const,
-    nom: "Sojorn Signature",
-    text: "Un hotel especialment singular per la seva identitat, hospitalitat i vinculació amb el territori.",
-  },
-  {
-    nivell: 3 as const,
-    nom: "Sojorn Icon",
-    text: "Hotels extraordinaris que representen una experiència excepcional dins del territori català.",
-  },
-];
 
 export default function Home() {
   return (
@@ -85,20 +43,9 @@ export default function Home() {
           <p className="mt-6 animate-entrada font-serif text-entradeta italic [animation-delay:150ms]">
             Dormir en un lloc. Viure un territori.
           </p>
-          <a
-            href="#catalunya"
-            className="group mt-12 inline-flex animate-entrada items-center border border-paper/30 bg-bosc px-6 py-4 text-center text-ui tracking-[0.14em] text-paper uppercase transition-colors duration-200 ease-sojorn [animation-delay:300ms] hover:border-paper/70 sm:px-8 sm:whitespace-nowrap"
-          >
-            <span className="relative">
-              <span aria-hidden="true">[ </span>
-              Descobreix la selecció
-              <span aria-hidden="true"> ]</span>
-              <span
-                aria-hidden="true"
-                className="absolute inset-x-0 -bottom-1.5 h-px origin-left scale-x-0 bg-paper transition-transform duration-500 ease-sojorn group-hover:scale-x-100 group-focus-visible:scale-x-100 motion-reduce:scale-x-100 motion-reduce:opacity-0 motion-reduce:transition-opacity motion-reduce:duration-200 motion-reduce:group-hover:opacity-100 motion-reduce:group-focus-visible:opacity-100"
-              />
-            </span>
-          </a>
+          <BotoBosc href="#catalunya" className="mt-12 animate-entrada [animation-delay:300ms]">
+            Descobreix la selecció
+          </BotoBosc>
         </div>
       </section>
 
@@ -242,17 +189,7 @@ export default function Home() {
           </div>
         </section>
 
-        <footer className="mx-auto w-full max-w-pagina px-marge">
-          <Divider on="bosc" />
-          <div className="flex flex-col gap-3 py-12 sm:flex-row sm:items-baseline sm:justify-between">
-            <span className="font-serif text-h5 font-normal tracking-[0.24em]">
-              SOJORN
-            </span>
-            <span className="text-meta text-pedra-200">
-              Una guia d&apos;hotels amb encant a Catalunya.
-            </span>
-          </div>
-        </footer>
+        <Peu />
       </div>
     </main>
   );

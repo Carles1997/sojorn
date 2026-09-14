@@ -8,14 +8,14 @@ web
 
 ## Users
 
-- **Viatger amb criteri (usuari principal).** Persona que no busca "un lloc per dormir" sinó un lloc que li faci conèixer un territori de Catalunya. Arriba buscant inspiració i confiança abans que preu. La seva feina: descobrir un territori, trobar-hi l'hotel adequat i sol·licitar-hi una estada.
-- **Propietari o gestor d'hotel seleccionat (usuari secundari).** Rep les sol·licituds de reserva i les confirma o rebutja manualment. La seva disponibilitat se sincronitza via iCal/PMS.
+- **Viatger amb criteri (usuari principal).** Persona que no busca "un lloc per dormir" sinó un lloc que li faci conèixer un territori de Catalunya. Arriba buscant inspiració i confiança abans que preu. La seva feina: descobrir un territori, trobar-hi l'hotel adequat i reservar-lo directament amb l'hotel.
+- **Propietari o gestor d'hotel seleccionat (usuari secundari).** La seva fitxa a Sojorn enllaça amb la seva web oficial o de reserva; la reserva i el pagament els gestiona ell mateix.
 
 ## Product Purpose
 
 Sojorn és una guia de prestigi d'hotels amb encant a Catalunya: una selecció independent i editorial, amb el paral·lelisme conceptual de la Guia Michelin. Existeix per descobrir, seleccionar i connectar hotels amb identitat, arrelats al seu territori, i posar en valor la cultura, la gastronomia, el paisatge i les persones de cada lloc.
 
-L'èxit és que l'usuari recorri: m'inspira → em genera confiança → descobreixo → m'ho recomanen → trio → sol·licito → visc el territori. La reserva és la conseqüència de la confiança, no el punt de partida.
+L'èxit és que l'usuari recorri: m'inspira → em genera confiança → descobreixo → m'ho recomanen → trio → reservo amb l'hotel → visc el territori. La reserva és la conseqüència de la confiança, no el punt de partida.
 
 ## Positioning
 
@@ -25,10 +25,7 @@ Sojorn no és una OTA (tipus Booking) ni un agregador de ressenyes. Té autorita
 
 ## Operating Context
 
-- **Flux de reserva (model híbrid de sol·licitud):**
-  1. L'usuari sol·licita disponibilitat des de Sojorn, sense pagament immediat.
-  2. La sol·licitud queda **pendent** fins que el propietari la confirma manualment. La disponibilitat se sincronitza via iCal/PMS.
-  3. Un cop acceptada, el pagament es fa **directament entre usuari i propietari**. Sojorn no processa pagaments.
+- **Sojorn com a guia i prescriptor:** Sojorn no té motor de reserves propi ni processa pagaments. Cada fitxa d'hotel acaba amb les dades de contacte i un enllaç exterior a la web oficial o de reserva de l'hotel; la reserva i el pagament es fan directament amb l'hotel.
 - **Descoberta organitzada com una guia:** per territoris (Empordà, Garrotxa, Pirineus, Priorat, Penedès, Terres de l'Ebre…), per universos Sojorn (La Taula, El Paisatge, La Història, El Camí, El Silenci, El Romanticisme, La Terra) i per distintius.
 
 ## Capabilities and Constraints
@@ -39,12 +36,11 @@ Sojorn no és una OTA (tipus Booking) ni un agregador de ressenyes. Té autorita
   - *Distintius:* SOJORN SELECTION, SOJORN SIGNATURE i SOJORN ICON (aquest últim, només per a casos excepcionals).
   - *Criteris Sojorn:* Identitat, Hospitalitat, Territori, Autenticitat, Excel·lència, Compromís.
   - *Dimensions de valoració editorial:* Identitat, Territori, Gastronomia, Experiència.
-  - *Seccions de la fitxa d'hotel:* L'Hotel → El Territori → La Taula → El Camí → La Vida Local.
+  - *Seccions de la fitxa d'hotel:* portada (fotografia, nom, ubicació i distintiu) → L'Essència (relat d'autor: per què és Sojorn, història i vincle amb el territori) → criteris i universos que el defineixen → galeria → informació pràctica i enllaç a la web de l'hotel.
   - *El nostre criteri:* les preguntes "Per què hi aniríem?", "Per què és especial?", "Per a qui el recomanem?" i "Quan hi aniríem?".
 - **Decisions obertes:**
   - Model de negoci (qui paga i com).
   - Procés de selecció i avaluació d'hotels.
-  - Integració concreta amb els PMS.
   - Si els usuaris tenen compte.
 
 ## Brand Commitments
@@ -79,9 +75,9 @@ Encara no hi ha contingut real: ni hotels seleccionats, ni fotografia pròpia am
 1. **Criteri abans que volum.** Cada element ha de reforçar que hi ha una selecció amb judici, no un catàleg.
 2. **El territori és el protagonista.** L'hotel s'explica pel lloc on és; la descoberta del territori precedeix la d'allotjament.
 3. **Confiança abans que conversió.** Ni preus a la primera impressió, ni pressió comercial, ni ressenyes massives.
-4. **Transparència en la sol·licitud.** L'usuari ha d'entendre sempre que la reserva és una sol·licitud pendent de confirmació, i que el pagament es fa directament amb el propietari.
+4. **Transparència en la reserva.** L'usuari ha d'entendre sempre que Sojorn recomana i que la reserva es fa directament amb l'hotel, a la seva web: l'enllaç diu on porta i que s'obre fora de Sojorn.
 5. **Autoritat pròpia.** Sojorn signa les seves recomanacions; no és un intermediari neutre.
 
 ## Accessibility & Inclusion
 
-Objectiu WCAG 2.2 AA: contrast de text AA sobre els fons de la marca, `prefers-reduced-motion` respectat, i navegació completa amb teclat per al flux de sol·licitud.
+Objectiu WCAG 2.2 AA: contrast de text AA sobre els fons de la marca, `prefers-reduced-motion` respectat, i navegació completa amb teclat per a la descoberta, els filtres del directori i l'enllaç a la web de cada hotel.

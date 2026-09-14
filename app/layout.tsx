@@ -15,7 +15,7 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Sojorn",
+  title: { default: "Sojorn", template: "%s · Sojorn" },
   description: "Una guia d'hotels amb encant a Catalunya.",
 };
 

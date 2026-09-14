@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import {
   useEffect,
   useId,
@@ -25,15 +26,16 @@ export type ImatgeTerritori = {
 export type Territori = {
   id: TerritoriId;
   nom: string;
+  /** El nom amb la preposició i l'article: "a l'Empordà", "als Pirineus". */
+  ambPreposicio: string;
   comarques: string;
   text: string;
   /** Fotografia editorial del territori, en un marc vertical fix de 3:4. */
   imatge: ImatgeTerritori;
 };
 
-// Color natural afinat, no tenyit: una mica més de contrast i un punt de calidesa (sèpia al 10%) que
-// tempera els cels cian sense virar la foto al marró.
-const TRACTAMENT_FOTO = "object-cover contrast-110 sepia-10";
+// Tractament fotogràfic compartit amb el directori i les fitxes (utilitat foto-editorial, globals.css).
+const TRACTAMENT_FOTO = "object-cover foto-editorial";
 
 export type TerritoriGeo = {
   /** Camins de les comarques del territori. */
@@ -220,6 +222,12 @@ export function MapaInteractiu({ territoris, geo, fons, linies, amplada, alcada 
               <h3 className="[text-box:trim-start_cap_alphabetic]">{t.nom}</h3>
               <p className="mt-4 text-meta text-oliva">{t.comarques}</p>
               <p className="mt-8 max-w-[32ch] font-serif text-entradeta italic">{t.text}</p>
+              <Link
+                href={`/hotels?territori=${t.id}`}
+                className="mt-6 self-start text-ui underline decoration-oliva/50 underline-offset-[0.35em] transition-colors duration-200 ease-sojorn hover:decoration-bosc"
+              >
+                Hotels {t.ambPreposicio}
+              </Link>
               {/* mt-auto ancora la fotografia a la base: queda a la mateixa altura en tots els territoris. */}
               <figure className="mt-auto pt-10">
                 <div className="relative aspect-[3/4] overflow-hidden bg-pedra-100">

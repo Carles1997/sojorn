@@ -81,6 +81,10 @@
   --text-meta--line-height: 1.5;
   --text-meta--letter-spacing: 0.01em;
 
+  /* Relat: text d'autor de les fitxes i frases de les targetes, en Spectral. */
+  --text-relat: 1.1875rem;
+  --text-relat--line-height: 1.7;
+
   /* Espai negatiu */
   --spacing-marge: clamp(1.25rem, 0.5rem + 4vw, 5rem);
   --spacing-seccio: clamp(6rem, 4.5rem + 4vw, 8rem);
@@ -92,6 +96,17 @@
   /* Moviment */
   --ease-sojorn: cubic-bezier(0.16, 1, 0.3, 1);
   --animate-entrada: entrada 900ms var(--ease-sojorn) both;
+  /* Recomposició del directori en canviar un filtre: només opacitat. */
+  --animate-aparicio: aparicio 280ms var(--ease-sojorn) both;
+
+  @keyframes aparicio {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
   @keyframes entrada {
     from {
@@ -109,6 +124,12 @@
   --font-serif: var(--font-spectral), "Spectral", Georgia, "Times New Roman", serif;
   --font-sans: var(--font-geist), "Geist", ui-sans-serif, system-ui, sans-serif;
   --font-mono: initial;
+}
+
+/* Tractament fotogràfic editorial (panell del mapa, targetes i fitxes): color natural amb una mica
+   més de contrast i un punt de calidesa que tempera els cels cian sense virar al marró. */
+@utility foto-editorial {
+  filter: contrast(1.1) sepia(0.1);
 }
 
 @layer base {
