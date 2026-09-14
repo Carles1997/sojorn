@@ -57,7 +57,7 @@ export default function Home() {
     <main className="flex-1">
       <section
         aria-labelledby="sojorn"
-        className="relative isolate flex min-h-[100dvh] items-center justify-center overflow-hidden bg-bosc px-marge py-24 text-paper"
+        className="relative isolate flex min-h-[100dvh] items-center justify-center overflow-hidden bg-bosc px-marge py-24 text-paper selection:bg-paper selection:text-bosc"
       >
         <Image
           src={HERO_SRC}
@@ -65,12 +65,12 @@ export default function Home() {
           fill
           preload
           sizes="100vw"
-          className="-z-20 object-cover saturate-60"
+          className="-z-20 object-cover object-[50%_80%] saturate-50 sepia-40"
         />
-        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-bosc/60" />
+        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-bosc/70" />
         <div
           aria-hidden="true"
-          className="absolute inset-x-0 bottom-0 -z-10 h-1/2 bg-linear-to-t from-bosc/70 to-transparent"
+          className="absolute inset-x-0 bottom-0 -z-10 h-2/5 bg-linear-to-t from-bosc via-bosc/60 to-transparent"
         />
 
         <div className="flex flex-col items-center text-center">
@@ -85,7 +85,7 @@ export default function Home() {
           </p>
           <a
             href="#universos"
-            className="group mt-12 inline-flex animate-entrada items-center whitespace-nowrap border border-paper/30 bg-bosc px-6 py-4 text-ui tracking-[0.14em] text-paper uppercase transition-colors duration-200 [animation-delay:300ms] hover:border-paper/70 focus-visible:outline-paper sm:px-8"
+            className="group mt-12 inline-flex animate-entrada items-center border border-paper/30 bg-bosc px-6 py-4 text-center text-ui tracking-[0.14em] text-paper uppercase transition-colors duration-200 ease-sojorn [animation-delay:300ms] hover:border-paper/70 sm:px-8 sm:whitespace-nowrap"
           >
             <span className="relative">
               <span aria-hidden="true">[ </span>
@@ -103,11 +103,13 @@ export default function Home() {
       <section
         id="manifest"
         aria-label="Per què Sojorn"
-        className="bg-bosc text-paper"
+        className="bg-bosc text-paper selection:bg-paper selection:text-bosc"
       >
         <div className="mx-auto grid max-w-pagina grid-cols-12 gap-x-6 gap-y-20 px-marge py-seccio">
           <div className="col-span-12 lg:sticky lg:top-24 lg:col-span-5 lg:self-start">
-            <h2>Catalunya és molt més que una destinació.</h2>
+            <h2>
+              Catalunya és <em>molt més</em> que una destinació.
+            </h2>
             <p className="mt-10 font-serif text-entradeta italic">
               És una suma de territoris.
             </p>
@@ -144,17 +146,13 @@ export default function Home() {
       <section id="universos" aria-labelledby="universos-titol">
         <div className="mx-auto max-w-pagina px-marge py-seccio">
           <h2 id="universos-titol">Els universos</h2>
-          <p className="mt-8 max-w-[38ch] text-oliva">
-            La selecció no s&apos;ordena amb filtres, sinó per maneres de viure
-            un territori.
-          </p>
 
-          <ul className="mt-20">
+          <ul className="mt-16">
             {universos.map((univers) => (
               <li key={univers.nom}>
                 <Divider />
-                <div className="grid grid-cols-12 gap-x-6 gap-y-3 py-10 md:py-12">
-                  <h3 className="col-span-12 text-h2 font-light md:col-span-7">
+                <div className="grid grid-cols-12 gap-x-6 gap-y-4 py-10 md:py-14">
+                  <h3 className="col-span-12 text-h1 md:col-span-8">
                     {univers.nom}
                   </h3>
                   <p className="col-span-12 max-w-[34ch] text-oliva md:col-span-4 md:col-start-9 md:self-center">
@@ -182,7 +180,7 @@ export default function Home() {
       <footer className="mx-auto w-full max-w-pagina px-marge">
         <Divider />
         <div className="flex flex-col gap-3 py-12 sm:flex-row sm:items-baseline sm:justify-between">
-          <span className="font-serif text-h5 tracking-[0.24em]">SOJORN</span>
+          <span className="font-serif text-h5 font-normal tracking-[0.24em]">SOJORN</span>
           <span className="text-meta text-oliva">
             Una guia d&apos;hotels amb encant a Catalunya.
           </span>

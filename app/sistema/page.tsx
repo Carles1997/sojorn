@@ -8,25 +8,25 @@ export const metadata: Metadata = {
 const escala = [
   {
     rol: "H1",
-    detall: "Cormorant 300, de 60 a 120 px",
+    detall: "Spectral 300, de 60 a 120 px",
     classe: "font-serif text-h1",
     mostra: "Dormir en un lloc.",
   },
   {
     rol: "H2",
-    detall: "Cormorant 300, de 44 a 68 px",
+    detall: "Spectral 300, de 44 a 68 px",
     classe: "font-serif text-h2",
     mostra: "Catalunya és molt més que una destinació.",
   },
   {
     rol: "H3",
-    detall: "Cormorant 400, de 34 a 48 px",
+    detall: "Spectral 400, de 34 a 48 px",
     classe: "font-serif text-h3",
     mostra: "No tots els hotels poden ser Sojorn.",
   },
   {
     rol: "H4",
-    detall: "Cormorant 500, de 26 a 32 px",
+    detall: "Spectral 400, de 26 a 32 px",
     classe: "font-serif text-h4",
     mostra: "Per què l'hem seleccionat",
   },
@@ -44,7 +44,7 @@ const escala = [
   },
   {
     rol: "Entradeta",
-    detall: "Cormorant cursiva, de 22 a 26 px",
+    detall: "Spectral cursiva, de 22 a 26 px",
     classe: "font-serif italic text-entradeta max-w-[40ch]",
     mostra:
       "Una antiga casa pairal entre vinyes on l'arquitectura, la cuina i el paisatge expliquen el mateix territori.",
@@ -94,7 +94,7 @@ export default function SistemaPage() {
   return (
     <main className="mx-auto w-full max-w-pagina px-marge">
       <div className="flex items-baseline justify-between border-b py-6">
-        <span className="font-serif text-h5 tracking-[0.24em]">SOJORN</span>
+        <span className="font-serif text-h5 font-normal tracking-[0.24em]">SOJORN</span>
         <span className="text-meta text-oliva">Sistema de disseny</span>
       </div>
 

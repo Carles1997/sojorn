@@ -55,7 +55,7 @@
   --text-h4: clamp(1.625rem, 1.35rem + 0.7vw, 2rem);
   --text-h4--line-height: 1.18;
   --text-h4--letter-spacing: -0.01em;
-  --text-h4--font-weight: 500;
+  --text-h4--font-weight: 400;
 
   --text-h5: 1.125rem;
   --text-h5--line-height: 1.45;
@@ -105,18 +105,8 @@
   }
 }
 
-/* Moviment reduït: l'entrada es manté com a fos, sense desplaçament. */
-@keyframes entrada-fos {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 @theme inline {
-  --font-serif: var(--font-cormorant), "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-serif: var(--font-spectral), "Spectral", Georgia, "Times New Roman", serif;
   --font-sans: var(--font-geist), "Geist", ui-sans-serif, system-ui, sans-serif;
   --font-mono: initial;
 }
@@ -223,15 +213,21 @@
     outline-offset: 4px;
   }
 
+  /* Sobre bosc, la terracota no arriba a 3:1: el focus passa a paper. */
+  .bg-bosc :focus-visible {
+    outline-color: var(--color-paper);
+  }
+
   @media (prefers-reduced-motion: no-preference) {
     html {
       scroll-behavior: smooth;
     }
   }
 
+  /* Moviment reduït: el contingut apareix immediatament. */
   @media (prefers-reduced-motion: reduce) {
     :root {
-      --animate-entrada: entrada-fos 400ms ease-out both;
+      --animate-entrada: none;
     }
   }
 }

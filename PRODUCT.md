@@ -62,7 +62,7 @@ Sojorn no és una OTA (tipus Booking) ni un agregador de ressenyes. Té autorita
   | Text principal | Verd bosc | `#262C1F` |
   | Text secundari | Oliva | `#5A5744` |
   | Accents | Terracota | `#94513A` |
-  | Titulars (serif) | — | Cormorant Garamond |
+  | Titulars (serif) | — | Spectral (substitueix Cormorant Garamond, que desplaça els accents catalans en totes les versions publicades) |
   | Cos i UI (sans) | — | Geist |
 
 - **Estructura pinada per l'usuari:**
