@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-14T00:00:00Z",
+  "title": "Design System: Sojorn",
+  "extensions": {
+    "colorMeta": {
+      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "oklch(96.8% 0.0114 84.6)", "tonalRamp": ["oklch(15% 0.0114 84.6)", "oklch(27% 0.0114 84.6)", "oklch(39% 0.0114 84.6)", "oklch(51% 0.0114 84.6)", "oklch(63% 0.0114 84.6)", "oklch(75% 0.0114 84.6)", "oklch(87% 0.0114 84.6)", "oklch(96.8% 0.0114 84.6)"] },
+      "bosc": { "role": "primary", "displayName": "Verd bosc", "canonical": "oklch(28.3% 0.0245 128)", "tonalRamp": ["oklch(15% 0.0245 128)", "oklch(28.3% 0.0245 128)", "oklch(39% 0.0245 128)", "oklch(51% 0.0245 128)", "oklch(63% 0.0245 128)", "oklch(75% 0.0245 128)", "oklch(87% 0.0245 128)", "oklch(95% 0.0245 128)"] },
+      "oliva": { "role": "secondary", "displayName": "Oliva", "canonical": "oklch(45.4% 0.0298 100)", "tonalRamp": ["oklch(15% 0.0298 100)", "oklch(27% 0.0298 100)", "oklch(45.4% 0.0298 100)", "oklch(55% 0.0298 100)", "oklch(65% 0.0298 100)", "oklch(75% 0.0298 100)", "oklch(87% 0.0298 100)", "oklch(95% 0.0298 100)"] },
+      "terracota": { "role": "tertiary", "displayName": "Terracota", "canonical": "oklch(51% 0.0964 39.6)", "tonalRamp": ["oklch(15% 0.0964 39.6)", "oklch(27% 0.0964 39.6)", "oklch(39% 0.0964 39.6)", "oklch(51% 0.0964 39.6)", "oklch(63% 0.0964 39.6)", "oklch(75% 0.07 39.6)", "oklch(87% 0.04 39.6)", "oklch(95% 0.02 39.6)"] },
+      "pedra-500": { "role": "neutral", "displayName": "Pedra", "canonical": "oklch(60% 0.022 95)", "tonalRamp": ["#29261E", "#3D3B30", "#565346", "#6D695B", "#848072", "#A6A292", "#C1BEB0", "#E4E1D6"] },
+      "linia": { "role": "neutral", "displayName": "Línia", "canonical": "rgba(90, 87, 68, 0.2)" }
+    },
+    "typographyMeta": {
+      "h1": { "displayName": "H1", "purpose": "Titular principal: claim, nom d'hotel o de territori. Un per pàgina." },
+      "h2": { "displayName": "H2", "purpose": "Obertura de secció." },
+      "h3": { "displayName": "H3", "purpose": "Subseccions i blocs de fitxa." },
+      "h4": { "displayName": "H4", "purpose": "Títols de bloc petits." },
+      "h5": { "displayName": "H5", "purpose": "Títols funcionals en sans." },
+      "h6": { "displayName": "H6", "purpose": "Títol funcional mínim." },
+      "entradeta": { "displayName": "Entradeta", "purpose": "Frase editorial en cursiva que resumeix un hotel o territori." },
+      "cos": { "displayName": "Cos", "purpose": "Text de lectura i descripcions, màxim 65ch." },
+      "ui": { "displayName": "Interfície", "purpose": "Navegació, botons i etiquetes de camp." },
+      "meta": { "displayName": "Metadades", "purpose": "Territori i província, peus de foto, dates." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease-sojorn", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Corba única per a fosos i petits desplaçaments." },
+      { "name": "durada-estat", "value": "200ms", "purpose": "Canvis d'estat: hover, focus, color de línia." },
+      { "name": "durada-revelacio", "value": "600ms", "purpose": "Entrada suau de contingut; desactivada amb prefers-reduced-motion." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" },
+      { "name": "2xl", "value": "1536px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botó principal",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Acció principal i única d'una pantalla, com sol·licitar disponibilitat. Petit, rectangular i pla.",
+      "html": "<button class=\"ds-btn-primary\">Sol·licitar disponibilitat</button>",
+      "css": ".ds-btn-primary { background: var(--color-bosc, #262C1F); color: var(--color-paper, #F8F4EC); font-family: Geist, ui-sans-serif, system-ui, sans-serif; font-size: 0.9375rem; font-weight: 500; line-height: 1.4; letter-spacing: 0.01em; padding: 14px 28px; border: 1px solid var(--color-bosc, #262C1F); border-radius: 0; cursor: pointer; transition: background-color 200ms cubic-bezier(0.16, 1, 0.3, 1), border-color 200ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-primary:hover { background: var(--color-pedra-800, #3D3B30); border-color: var(--color-pedra-800, #3D3B30); } .ds-btn-primary:active { transform: translateY(1px); } .ds-btn-primary:focus-visible { outline: 1px solid var(--color-terracota, #94513A); outline-offset: 4px; }"
+    },
+    {
+      "name": "Enllaç editorial",
+      "kind": "button",
+      "refersTo": "link-editorial",
+      "description": "Acció secundària en forma de text subratllat, com Descobreix Sojorn.",
+      "html": "<a class=\"ds-link\" href=\"#\">Descobreix Sojorn</a>",
+      "css": ".ds-link { color: var(--color-bosc, #262C1F); font-family: Geist, ui-sans-serif, system-ui, sans-serif; font-size: 0.9375rem; font-weight: 500; line-height: 1.4; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.35em; text-decoration-color: var(--color-oliva, #5A5744); transition: color 200ms cubic-bezier(0.16, 1, 0.3, 1), text-decoration-color 200ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-link:hover { color: var(--color-terracota, #94513A); text-decoration-color: var(--color-terracota, #94513A); } .ds-link:focus-visible { outline: 1px solid var(--color-terracota, #94513A); outline-offset: 4px; }"
+    },
+    {
+      "name": "Camp de formulari",
+      "kind": "input",
+      "refersTo": "input-line",
+      "description": "Camp amb etiqueta a sobre i una sola línia inferior, sense caixa.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-field-label\">Correu electrònic</span><input class=\"ds-field-input\" type=\"email\" /></label>",
+      "css": ".ds-field { display: grid; gap: 8px; max-width: 24rem; } .ds-field-label { color: var(--color-oliva, #5A5744); font-family: Geist, ui-sans-serif, system-ui, sans-serif; font-size: 0.8125rem; line-height: 1.5; letter-spacing: 0.01em; } .ds-field-input { background: transparent; color: var(--color-bosc, #262C1F); font-family: Geist, ui-sans-serif, system-ui, sans-serif; font-size: 1rem; line-height: 1.5; padding: 8px 0; border: 0; border-bottom: 1px solid var(--color-pedra-500, #848072); border-radius: 0; transition: border-color 200ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-field-input:hover { border-bottom-color: var(--color-oliva, #5A5744); } .ds-field-input:focus-visible { border-bottom-color: var(--color-terracota, #94513A); outline: 1px solid var(--color-terracota, #94513A); outline-offset: 4px; }"
+    },
+    {
+      "name": "Separador",
+      "kind": "custom",
+      "refersTo": "divider-line",
+      "description": "Línia d'1 px en oliva al 20% que separa grups de contingut.",
+      "html": "<hr class=\"ds-divider\" />",
+      "css": ".ds-divider { border: 0; border-top: 1px solid rgba(90, 87, 68, 0.2); margin: 0; width: 100%; }"
+    },
+    {
+      "name": "Titular amb entradeta",
+      "kind": "custom",
+      "refersTo": "headline-lede",
+      "description": "Parella signatura: H1 serif molt gran i lleuger amb text descriptiu petit en oliva.",
+      "html": "<div class=\"ds-headline\"><h1 class=\"ds-h1\">Dormir en un lloc. <em>Viure un territori.</em></h1><p class=\"ds-lede\">Una guia d'hotels amb encant a Catalunya.</p></div>",
+      "css": ".ds-headline { display: grid; gap: 48px; background: var(--color-paper, #F8F4EC); padding: 48px 0; } .ds-h1 { margin: 0; color: var(--color-bosc, #262C1F); font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(3.75rem, 0.5rem + 8vw, 7.5rem); font-weight: 300; line-height: 1.02; letter-spacing: -0.025em; text-wrap: balance; } .ds-h1 em { font-style: italic; } .ds-lede { margin: 0; max-width: 34ch; color: var(--color-oliva, #5A5744); font-family: Geist, ui-sans-serif, system-ui, sans-serif; font-size: 1rem; line-height: 1.7; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "La guia en paper",
+    "overview": "Sojorn es comporta com una guia impresa en paper bo: una publicació que selecciona, no un aparador que ven. Tot el sistema s'aguanta en tres materials: el paper càlid del fons, la tinta verd bosc i les línies fines d'oliva que ordenen la pàgina com els filets d'una maqueta editorial. L'autoritat ve de la tipografia i de l'aire, mai de l'ornament.\n\nLa densitat és de galeria: poques idees per pantalla, seccions separades per molt d'espai negatiu i una jerarquia tipogràfica de salt dramàtic, amb titulars serif molt grans i lleugers davant d'un text funcional petit, net i llegible. La interfície és plana i d'angle recte; la profunditat la dona la fotografia, no les ombres.\n\nAnti-referències confirmades: l'estètica d'OTA (Booking), els colors turístics, les targetes amb ombra, els botons grossos, els radis arrodonits i les icones decoratives.",
+    "keyCharacteristics": [
+      "Un sol tema clar, en paper; sense mode fosc.",
+      "Serif Cormorant Garamond per a la veu editorial i Geist per a la informació.",
+      "Línies d'1 px en oliva al 20% com a única estructura visible.",
+      "Angle recte i zero ombres a tot arreu.",
+      "Espai negatiu generós: les seccions respiren entre 96 i 128 px."
+    ],
+    "rules": [
+      { "name": "La Regla de la Terracota Escassa", "body": "La terracota ocupa com a molt el 2% d'una pantalla. Mai omple un fons, un bloc o un botó sencer; viu en línies, glifs i estats.", "section": "colors" },
+      { "name": "La Regla del Paper Únic", "body": "Només hi ha un tema: paper clar. Cap secció no s'inverteix a mode fosc; un panell bosc és un bloc de color dins de la mateixa pàgina, no un canvi de tema.", "section": "colors" },
+      { "name": "La Regla del Salt Dramàtic", "body": "Entre l'H1 i el cos hi ha com a mínim un factor de 5 (120 px contra 16 px a escriptori). Mai no s'afegeixen mides intermèdies improvisades per suavitzar el salt; el contrast és la jerarquia.", "section": "typography" },
+      { "name": "La Regla de la Cursiva", "body": "L'èmfasi dins d'un titular es fa amb la cursiva de la mateixa Cormorant, mai amb negreta, color o una altra família.", "section": "typography" },
+      { "name": "La Regla del Pes Invers", "body": "Com més gran és la serif, més lleugera: 300 per a H1 i H2, 400 per a H3 i 500 per a H4, perquè les mides petites de Cormorant necessiten cos.", "section": "typography" },
+      { "name": "La Regla de l'Aire", "body": "Dues seccions mai no se separen amb menys de 96 px. Si una pantalla sembla buida, és correcte; si sembla plena, sobra contingut.", "section": "typography" },
+      { "name": "La Regla de la Línia", "body": "Les divisions es fan amb una línia d'1 px en oliva al 20% (o amb espai), mai amb caixes, fons de targeta o ombres. S'usa una sola línia per canvi de grup, no una a cada fila.", "section": "elevation" },
+      { "name": "La Regla Plana", "body": "Cap element no projecta ombra, en cap estat. El hover i el focus canvien color, línia o posició, mai elevació.", "section": "elevation" },
+      { "name": "La Regla de l'Angle Recte", "body": "Radi 0 a botons, camps, imatges i contenidors. Una cantonada arrodonida trenca el sistema.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do fes servir `bg-paper` com a fons únic de pàgina i `text-bosc` com a tinta per defecte.",
+      "Do separa continguts amb `border-t` (el color de vora per defecte ja és oliva al 20%) o amb espai.",
+      "Do dona a cada secció `py-seccio` i reserva `py-seccio-amplia` per als moments de pausa.",
+      "Do limita el text de cos a `max-w-mesura` (65ch) i les entradetes a 40ch.",
+      "Do fes servir la cursiva de Cormorant per a l'èmfasi i per a les entradetes.",
+      "Do manté la terracota per a focus, enllaços actius i el distintiu ✦."
+    ],
+    "donts": [
+      "Don't facis servir ombres, radis arrodonits, targetes amb fons ni icones decoratives.",
+      "Don't afegeixis un mode fosc ni inverteixis seccions.",
+      "Don't posis una etiqueta petita en majúscules sobre un titular; el titular parla sol. Les metadades (Empordà · Girona) van sota o al costat del nom, no com a avantsala.",
+      "Don't facis servir la terracota en superfícies grans ni el pedra-500 per a text petit.",
+      "Don't reintroduïssis la paleta de colors per defecte de Tailwind (zinc, stone, etc.); no existeix al tema.",
+      "Don't barregis famílies dins d'un titular."
+    ]
+  }
+}
