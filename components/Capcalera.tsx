@@ -20,7 +20,7 @@ export function Capcalera({ hotels }: CapcaleraProps) {
                 href="/hotels"
                 aria-current={hotels === "pagina" ? "page" : undefined}
                 className={`underline-offset-[0.4em] transition-colors duration-200 ease-sojorn hover:text-bosc ${
-                  hotels ? "text-bosc underline decoration-terracota" : "text-oliva"
+                  hotels ? "text-bosc underline decoration-burdeus" : "text-oliva"
                 }`}
               >
                 Hotels

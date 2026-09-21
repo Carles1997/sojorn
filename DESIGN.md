@@ -2,21 +2,22 @@
 name: Sojorn
 description: Una guia d'hotels amb encant a Catalunya.
 colors:
-  paper: "#F8F4EC"
-  bosc: "#262C1F"
-  oliva: "#5A5744"
-  terracota: "#94513A"
-  pedra-50: "#EDEBE2"
-  pedra-100: "#E4E1D6"
-  pedra-200: "#D6D3C6"
-  pedra-300: "#C1BEB0"
-  pedra-400: "#A6A292"
-  pedra-500: "#848072"
-  pedra-600: "#6D695B"
-  pedra-700: "#565346"
-  pedra-800: "#3D3B30"
-  pedra-900: "#29261E"
-  linia: "rgba(90, 87, 68, 0.2)"
+  paper: "#EFE8DA"
+  bosc: "#2A2011"
+  oliva: "#584E3B"
+  burdeus: "#6E2E29"
+  or: "#946A34"
+  pedra-50: "#E6DED0"
+  pedra-100: "#DDD4C3"
+  pedra-200: "#CFC5B0"
+  pedra-300: "#C1B094"
+  pedra-400: "#A69A80"
+  pedra-500: "#8A7F66"
+  pedra-600: "#6F6650"
+  pedra-700: "#5C5240"
+  pedra-800: "#42392B"
+  pedra-900: "#35261F"
+  linia: "rgba(88, 78, 59, 0.2)"
 typography:
   h1:
     fontFamily: "Spectral, Georgia, 'Times New Roman', serif"
@@ -107,7 +108,7 @@ components:
     typography: "{typography.meta}"
     rounded: "{rounded.none}"
   mapa-etiqueta-seleccionada:
-    textColor: "{colors.terracota}"
+    textColor: "{colors.burdeus}"
     backgroundColor: "{colors.paper}"
     typography: "{typography.meta}"
     rounded: "{rounded.none}"
@@ -179,7 +180,7 @@ components:
 
 **Creative North Star: "La guia en paper"**
 
-Sojorn es comporta com una guia impresa en paper bo: una publicació que selecciona, no un aparador que ven. Tot el sistema s'aguanta en tres materials: el paper càlid del fons, la tinta verd bosc i les línies fines d'oliva que ordenen la pàgina com els filets d'una maqueta editorial. El verd bosc també pot ser camp: seccions senceres en bosc amb text en paper, com les pàgines de color d'una guia, dins del mateix tema. La cartografia parla la mateixa llengua: línia hiperfina d'oliva, sense farciments, amb la terracota com a únic accent de selecció. L'autoritat ve de la tipografia i de l'aire, mai de l'ornament.
+Sojorn es comporta com una guia impresa en paper bo: una publicació que selecciona, no un aparador que ven. Tot el sistema s'aguanta en tres materials: el paper càlid del fons, la tinta bosc i les línies fines d'oliva que ordenen la pàgina com els filets d'una maqueta editorial. El bosc també pot ser camp: seccions senceres en bosc amb text en paper, com les pàgines de color d'una guia, dins del mateix tema. La cartografia parla la mateixa llengua: línia hiperfina d'oliva, sense farciments, amb el burdeus com a únic accent de selecció. L'autoritat ve de la tipografia i de l'aire, mai de l'ornament.
 
 La densitat és de galeria: poques idees per pantalla, seccions separades per molt d'espai negatiu i una jerarquia tipogràfica de salt dramàtic, amb titulars serif molt grans i lleugers davant d'un text funcional petit, net i llegible. La interfície és plana i d'angle recte; la profunditat la dona la fotografia a sang, tractada amb una gradació càlida i un vel de bosc, no les ombres.
 
@@ -191,37 +192,38 @@ Anti-referències confirmades: l'estètica d'OTA (Booking), els colors turístic
 - Un sol tema clar, en paper; els camps bosc són blocs de color, no un mode fosc.
 - Serif Spectral per a la veu editorial i Geist per a la informació.
 - Línies d'1 px com a única estructura visible: oliva al 20% sobre paper, paper al 20% sobre bosc.
-- Cartografia de línia, sense farciments; la terracota només marca la selecció.
+- Cartografia de línia, sense farciments; el burdeus només marca la selecció.
 - Angle recte i zero ombres a tot arreu.
 - Espai negatiu generós: les seccions respiren entre 96 i 128 px.
 - Fotografia en marc amb un sol tractament editorial; només la fotografia a sang porta vel.
 
 ## Colors
 
-Una paleta de territori: paper, bosc i oliva estructuren; la terracota només apunta.
+Una paleta de territori: paper, bosc i oliva estructuren; el burdeus només apunta.
 
 ### Primary
-- **Verd bosc** (bosc): tinta principal i camp. Titulars, text de cos important, botó principal i seccions senceres en bosc, com el manifest, la base de la fotografia d'obertura, el tancament de la fitxa d'hotel i el peu. Contrast de 13,1:1 amb paper, en tots dos sentits.
+- **Bosc** (bosc): tinta principal i camp. Titulars, text de cos important, botó principal i seccions senceres en bosc, com el manifest, la base de la fotografia d'obertura, el tancament de la fitxa d'hotel i el peu. Contrast de 13,1:1 amb paper, en tots dos sentits.
 
 ### Secondary
-- **Oliva** (oliva): text secundari, descripcions, metadades, peus de foto, etiquetes del mapa, llegendes i opcions en repòs dels filtres sobre paper. Contrast de 6,6:1 sobre paper. És també el color de les línies sobre paper, al 20%, i de la cartografia: límits de comarca al 30% i contorn de Catalunya al 45%. La línia que es dibuixa en hover sobre una cel·la d'univers és oliva sòlid. Sobre bosc, el text secundari és pedra-200.
+- **Oliva** (oliva): text secundari, descripcions, metadades, peus de foto, etiquetes del mapa, llegendes i opcions en repòs dels filtres sobre paper. Contrast de 6,7:1 sobre paper. És també el color de les línies sobre paper, al 20%, i de la cartografia: límits de comarca al 30% i contorn de Catalunya al 45%. La línia que es dibuixa en hover sobre una cel·la d'univers és oliva sòlid. Sobre bosc, el text secundari és pedra-200.
 
 ### Tertiary
-- **Terracota** (terracota): accent escàs sobre paper. Focus, enllaç actiu, detalls d'1 px, com la selecció del mapa (contorn del territori i etiqueta seleccionada), el filet sota l'opció triada dels filtres del directori i el subratllat de la secció activa a la capçalera interna. Contrast de 5,5:1 sobre paper, vàlid per a text petit. Sobre bosc no funciona (uns 2,3:1): allà el focus és paper.
+- **Burdeus** (burdeus): accent escàs sobre paper. Focus, enllaç actiu, detalls d'1 px, com la selecció del mapa (contorn del territori i etiqueta seleccionada), el filet sota l'opció triada dels filtres del directori i el subratllat de la secció activa a la capçalera interna. Contrast de 8,3:1 sobre paper, vàlid per a text petit. Sobre bosc no funciona (1,6:1): allà el focus és paper.
 
 ### Neutral
+- **Or** (or, #946A34): el Gold de la paleta. Només línies i vores sobre camp bosc (3,3:1): el subratllat que creix sota el botó i la vora en hover. Mai text ni superfícies.
 - **Paper** (paper): fons global de tot el lloc, text sobre camps bosc (13,1:1), línies sobre bosc al 20% i focus sobre bosc.
 - **Pedra** (pedra-50 a pedra-900): grisos càlids en OKLCH, al to 95 i amb croma baixa, per a fons alterns (50 a 200), línies i estats inactius (300 a 400) i text de suport sobre paper (600 en amunt, 5,0:1 o més). Pedra-100 és el fons de tots els marcs fotogràfics mentre la imatge carrega. Pedra-200 és el text secundari sobre bosc (9,6:1), com la nota de prescriptor del tancament de la fitxa. Pedra-800 és el hover del botó sobre paper. Pedra-500 (3,6:1) només serveix per a text gran o elements no textuals.
 - **Línia** (linia): oliva al 20%. Separadors, vores i divisions sobre paper. És el color de vora per defecte de tots els elements.
 
 ### Named Rules
-**La Regla de la Terracota Escassa.** La terracota ocupa com a molt el 2% d'una pantalla. Mai omple un fons, un bloc o un botó sencer; viu en línies, glifs i estats.
+**La Regla del Burdeus Escàs.** El burdeus ocupa com a molt el 2% d'una pantalla. Mai omple un fons, un bloc o un botó sencer; viu en línies, glifs i estats.
 
 **La Regla del Paper Únic.** Només hi ha un tema: paper clar. Un camp bosc és un bloc de color dins de la mateixa pàgina, no un mode fosc ni un canvi de tema; porta els seus propis valors de text, línia, focus i selecció.
 
-**La Regla del Camp Bosc.** Una superfície bosc canvia els valors, no el tema: text principal en paper, text secundari en pedra-200, línies en paper al 20%, focus en paper i selecció de text invertida (fons paper, text bosc). Ni l'oliva ni la terracota hi fan de text o de focus.
+**La Regla del Camp Bosc.** Una superfície bosc canvia els valors, no el tema: text principal en paper, text secundari en pedra-200, línies en paper al 20%, focus en paper i selecció de text invertida (fons paper, text bosc). Ni l'oliva ni el burdeus hi fan de text o de focus.
 
-**La Regla del Mapa sense Farciment.** La cartografia no pinta mai cap superfície de color, en cap estat: comarques en oliva al 30%, límit de Catalunya en oliva al 45% i selecció en contorn de terracota. L'únic farciment és el mateix paper del fons, que fa de màscara per als contorns. El territori es llegeix pel traç.
+**La Regla del Mapa sense Farciment.** La cartografia no pinta mai cap superfície de color, en cap estat: comarques en oliva al 30%, límit de Catalunya en oliva al 45% i selecció en contorn de burdeus. L'únic farciment és el mateix paper del fons, que fa de màscara per als contorns. El territori es llegeix pel traç.
 
 ## Typography
 
@@ -302,7 +304,7 @@ La fotografia en marc (el panell del mapa, les targetes d'hotel, la portada i la
 
 ## Shapes
 
-Angle recte absolut. L'escala de radis de Tailwind està eliminada del tema: `rounded-xl` i similars no generen CSS. Les vores són sempre d'1 px: en color línia sobre paper i en paper al 20% sobre bosc. El botó sobre bosc porta una vora de paper al 30% (2,5:1, decorativa: l'etiqueta ja identifica el control) que passa a paper al 70% en hover. Les línies són decoratives (1,34:1 sobre paper, 1,85:1 sobre bosc). El focus és un contorn d'1 px amb 4 px de separació, en terracota sobre paper i en paper sobre bosc.
+Angle recte absolut. L'escala de radis de Tailwind està eliminada del tema: `rounded-xl` i similars no generen CSS. Les vores són sempre d'1 px: en color línia sobre paper i en paper al 20% sobre bosc. El botó sobre bosc porta una vora de paper al 30% (2,4:1, decorativa: l'etiqueta ja identifica el control) que passa a or en hover. Les línies són decoratives (1,35:1 sobre paper, 1,78:1 sobre bosc). El focus és un contorn d'1 px amb 4 px de separació, en burdeus sobre paper i en paper sobre bosc.
 
 La cartografia manté l'1 px a qualsevol mida del mapa: tots els traços són non-scaling-stroke, amb unions arrodonides al vèrtex (no a la cantonada de cap element). Fora del mapa, l'única forma no rectangular és la branca d'olivera dels distintius, un dibuix vectorial del client en SVG, no un caràcter tipogràfic.
 
@@ -314,7 +316,7 @@ La cartografia manté l'1 px a qualsevol mida del mapa: tots els traços són no
 ### Capçalera interna
 Una línia de guia: la marca a l'esquerra i la navegació a la dreta, sobre un filet.
 - **Estructura:** dins del contenidor de pàgina, una fila alineada per la línia de base amb 24 px de padding vertical i una línia sota. La marca SOJORN és l'enllaç a l'inici, amb el nom accessible "Sojorn: inici".
-- **Navegació:** una llista en Interfície amb 32 px entre elements; ara només "Hotels". En repòs, oliva; en hover, bosc en 200 ms. Dins de la secció d'hotels (directori i fitxes), l'enllaç és bosc i subratllat en terracota amb 0,4em de separació; només el directori porta `aria-current="page"`.
+- **Navegació:** una llista en Interfície amb 32 px entre elements; ara només "Hotels". En repòs, oliva; en hover, bosc en 200 ms. Dins de la secció d'hotels (directori i fitxes), l'enllaç és bosc i subratllat en burdeus amb 0,4em de separació; només el directori porta `aria-current="page"`.
 - **Ús:** a les pàgines internes. La home no en porta: obre amb la fotografia a sang.
 
 ### Peu
@@ -354,9 +356,9 @@ Quatre entrades en dues columnes i dues files, com un sumari obert: cada una és
 Una il·lustració cartogràfica de revista: el territori es llegeix pel traç, mai pel color.
 - **Dades:** comarques de "Divisions administratives v2.2" de l'Institut Cartogràfic i Geològic de Catalunya (1:1.000.000, CC BY 4.0), generades fora de línia en un mòdul TS que no s'edita a mà: projecció equirectangular local, vèrtexs enters en un viewBox de 1000 d'amplada, simplificació Douglas-Peucker de tolerància 1,2 que conserva les unions entre comarques (amb desempat independent del sentit) i posició calculada de les etiquetes. El generador és `scripts/generar-mapa.mjs`.
 - **Crèdit:** visible sota el mapa, en Metadades oliva: "Cartografia: Institut Cartogràfic i Geològic de Catalunya (CC BY 4.0)".
-- **Traç:** límits de comarca d'1 px en oliva dins d'un grup al 30% d'opacitat, perquè les vores compartides no se sumin. Els contorns es dibuixen per emmascarament i no a partir de vores calculades: un traç de 2 px de totes les comarques (oliva al 45%) o de les comarques del territori (terracota) queda tapat per dins pel farciment de paper de les mateixes comarques, i només se'n veu la meitat exterior, d'1 px. Així les vores internes d'un territori mai no es pinten, encara que les vores compartides no siguin idèntiques. Ordre de capes: contorn de Catalunya, paper de totes les comarques, una unitat per territori (contorn de terracota i, a sobre, el seu paper) ordenades perquè el territori amb el ratolí a sobre i, per últim, el seleccionat quedin damunt dels veïns, els límits de comarca i, a dalt de tot, una capa transparent i fixa que fa de zona sensible al punter. Tot és non-scaling-stroke, segons La Regla del Mapa sense Farciment.
-- **Territoris i estats:** sis (Empordà, Garrotxa, Pirineus, Priorat, Penedès, Terres de l'Ebre). En repòs, sense contorn; amb el ratolí a sobre, contorn de terracota al 50% i, si hi reposa 120 ms, selecció; seleccionat, contorn de terracota al 100%. L'opacitat del contorn canvia en 200 ms amb ease-sojorn. Sortir del mapa no desfà mai la selecció, i l'Empordà és la selecció inicial. Les zones sensibles al punter són les formes transparents de les comarques; els contorns no capturen el punter.
-- **Etiquetes i control:** els sis noms del mapa són el control; no hi ha cap llista de territoris a part. En Spectral cursiva a mida de Metadades, oliva i terracota el seleccionat, cadascun sobre una placa de paper ajustada al text i amb una zona sensible ampliada 6 px en horitzontal i 4 px en vertical, que no engrandeix la placa. Semànticament són una llista de pestanyes amb tabindex itinerant: les fletxes, Inici i Fi seleccionen i mouen el focus; el clic selecciona; amb el ratolí, reposar-hi 120 ms selecciona, igual que sobre el territori. El generador en calcula dos jocs de posicions i el component tria amb una consulta de contenidor sobre l'amplada del mateix mapa: a partir de 640 px, en espai lliure (el rectangle no toca cap línia ni cap altra etiqueta i queda dins del territori si hi cap); per sota, amb el centre sempre dins del territori i 14 px de separació mínima entre etiquetes, i la placa tapa les línies que l'etiqueta toca. Sense aquesta condició, a mida de mòbil les etiquetes buscarien espai lliure al mar o a França. L'SVG és ocult als lectors de pantalla.
+- **Traç:** límits de comarca d'1 px en oliva dins d'un grup al 30% d'opacitat, perquè les vores compartides no se sumin. Els contorns es dibuixen per emmascarament i no a partir de vores calculades: un traç de 2 px de totes les comarques (oliva al 45%) o de les comarques del territori (burdeus) queda tapat per dins pel farciment de paper de les mateixes comarques, i només se'n veu la meitat exterior, d'1 px. Així les vores internes d'un territori mai no es pinten, encara que les vores compartides no siguin idèntiques. Ordre de capes: contorn de Catalunya, paper de totes les comarques, una unitat per territori (contorn de burdeus i, a sobre, el seu paper) ordenades perquè el territori amb el ratolí a sobre i, per últim, el seleccionat quedin damunt dels veïns, els límits de comarca i, a dalt de tot, una capa transparent i fixa que fa de zona sensible al punter. Tot és non-scaling-stroke, segons La Regla del Mapa sense Farciment.
+- **Territoris i estats:** sis (Empordà, Garrotxa, Pirineus, Priorat, Penedès, Terres de l'Ebre). En repòs, sense contorn; amb el ratolí a sobre, contorn de burdeus al 50% i, si hi reposa 120 ms, selecció; seleccionat, contorn de burdeus al 100%. L'opacitat del contorn canvia en 200 ms amb ease-sojorn. Sortir del mapa no desfà mai la selecció, i l'Empordà és la selecció inicial. Les zones sensibles al punter són les formes transparents de les comarques; els contorns no capturen el punter.
+- **Etiquetes i control:** els sis noms del mapa són el control; no hi ha cap llista de territoris a part. En Spectral cursiva a mida de Metadades, oliva i burdeus el seleccionat, cadascun sobre una placa de paper ajustada al text i amb una zona sensible ampliada 6 px en horitzontal i 4 px en vertical, que no engrandeix la placa. Semànticament són una llista de pestanyes amb tabindex itinerant: les fletxes, Inici i Fi seleccionen i mouen el focus; el clic selecciona; amb el ratolí, reposar-hi 120 ms selecciona, igual que sobre el territori. El generador en calcula dos jocs de posicions i el component tria amb una consulta de contenidor sobre l'amplada del mateix mapa: a partir de 640 px, en espai lliure (el rectangle no toca cap línia ni cap altra etiqueta i queda dins del territori si hi cap); per sota, amb el centre sempre dins del territori i 14 px de separació mínima entre etiquetes, i la placa tapa les línies que l'etiqueta toca. Sense aquesta condició, a mida de mòbil les etiquetes buscarien espai lliure al mar o a França. L'SVG és ocult als lectors de pantalla.
 - **Panell:** a la dreta del mapa i alineat per dalt: el titular es retalla per sobre fins a l'alçada de les majúscules (`text-box-trim`), de manera que la línia de majúscules del nom coincideix amb el límit superior del mapa. Els sis panells s'apilen a la mateixa cel·la de graella: l'alçada és la del més alt i no hi ha salts de maquetació; només el seleccionat és exposat (la resta, inert i ocult). El canvi és només d'opacitat i de tot el bloc alhora, text, enllaç i fotografia: entrada en 200 ms i sortida en 120 ms, perquè els dos titulars no es llegeixin superposats. Contingut: nom del territori en H3, comarques en Metadades oliva 16 px per sota, la frase del territori en Entradeta 32 px més avall, l'enllaç al directori 24 px més avall i, ancorada a la base, la fotografia.
 - **Enllaç al directori:** "Hotels a l'Empordà", "Hotels als Pirineus" i equivalents, cap al directori filtrat pel territori (`/hotels?territori=…`). En Interfície bosc, subratllat d'1 px en oliva al 50% amb 0,35em de separació, que passa a bosc en hover en 200 ms. Ocupa només l'amplada del text.
 - **Fotografia del panell:** una sola imatge vertical 3:4 a tota l'amplada de la columna, dins d'un `figure` ancorat a la base del panell (panell en columna flexible, marge superior automàtic i 40 px mínims sobre la fotografia), de manera que queda a la mateixa altura en tots els territoris, tingui el text una línia o dues. Marc d'angle recte, sense ombra i amb fons pedra-100 mentre carrega; la proporció fixa evita salts de maquetació. Color natural, sense virar: el tractament compartit `foto-editorial` (contrast al 110% i sèpia al 10%), que escalfa un punt els cels cian. Cal triar fotos amb el cel o els clars prou definits perquè la vora del marc no es fongui amb el paper (per això l'Empordà és Cadaqués i no l'alba boirosa de Viladamat). Peu en Metadades oliva, amb alçada reservada de dues línies: "Fotografia provisional: autor (Unsplash)". Cada imatge porta un text alternatiu que descriu el que es veu i la seva procedència (fotògraf i font) a `components/home/territoris.ts`.
@@ -371,8 +373,8 @@ Una il·lustració cartogràfica de revista: el territori es llegeix pel traç, 
 ### Filtres del directori
 Un sumari de guia, no un formulari de cerca: tres línies de text entre filets.
 - **Estructura:** un formulari ("Filtra la selecció") amb una línia a dalt i una a baix i tres grups de botons d'opció (Territori, Univers, Distintiu) separats per una línia, amb 20 px de padding vertical. A partir de 768 px, cada grup és una fila de 12 columnes alineada per la línia de base: la llegenda en Metadades oliva a 2 columnes i les opcions a les 10 restants; per sota, la llegenda i les opcions s'apilen amb 8 px. El vocabulari surt de `lib/guia.ts`, la mateixa font que la home.
-- **Opcions:** el primer valor de cada grup és "Tots". Cada opció és una etiqueta en Interfície oliva amb 6 px de padding vertical, 24 px entre opcions i 4 px entre línies; el botó d'opció és ocult visualment i l'etiqueta és el control. Els distintius porten la branca d'olivera en terracota, 8 px abans del nom curt (Selection, Signature, Icon) en majúscules amb 0,14em de tracking.
-- **Estats:** en hover, bosc. L'opció triada és bosc amb un filet d'1 px de terracota sota l'etiqueta que creix des de l'esquerra en 200 ms amb ease-sojorn; amb moviment reduït apareix sense transició. El focus és el contorn terracota d'1 px a 4 px sobre l'etiqueta.
+- **Opcions:** el primer valor de cada grup és "Tots". Cada opció és una etiqueta en Interfície oliva amb 6 px de padding vertical, 24 px entre opcions i 4 px entre línies; el botó d'opció és ocult visualment i l'etiqueta és el control. Els distintius porten la branca d'olivera en burdeus, 8 px abans del nom curt (Selection, Signature, Icon) en majúscules amb 0,14em de tracking.
+- **Estats:** en hover, bosc. L'opció triada és bosc amb un filet d'1 px de burdeus sota l'etiqueta que creix des de l'esquerra en 200 ms amb ease-sojorn; amb moviment reduït apareix sense transició. El focus és el contorn burdeus d'1 px a 4 px sobre l'etiqueta.
 - **Adreça:** cada canvi reescriu l'adreça amb només els filtres actius, sense afegir entrades a l'historial; el servidor llegeix els valors vàlids, de manera que una adreça filtrada es pot compartir i els enllaços del mapa i de la fitxa hi porten directament.
 - **Recompte:** 16 px sota la barra, en una fila d'alçada mínima de 32 px: "N hotels" a la dreta en Metadades oliva, anunciat als lectors de pantalla quan canvia. Si hi ha algun filtre actiu, "Esborra els filtres" a l'esquerra, en Metadades oliva subratllada amb 0,3em de separació, que passa a bosc en hover.
 - **Estat buit:** centrat i amb `seccio` a dalt i a baix: "Cap hotel de la selecció no reuneix aquesta combinació." en Entradeta cursiva (màxim 30ch), una línia de cos oliva (màxim 46ch) 16 px per sota i "Esborra els filtres" en Interfície subratllada amb 0,35em de separació 32 px més avall, que passa a oliva en hover.
@@ -387,9 +389,9 @@ Un sumari de guia, no un formulari de cerca: tres línies de text entre filets.
 ### Targeta d'hotel
 Una entrada de guia: fotografia, filet, nom i frase. Sense fons, sense vora de caixa i sense ombra.
 - **Fotografia:** marc d'angle recte en 16:9 (horitzontal) o 3:4 (vertical), amb fons pedra-100 i `foto-editorial`. Per defecte, les grans són horitzontals i les estàndard verticals; els hotels relacionats de la fitxa són estàndard en 16:9.
-- **Cos:** 20 px sota la fotografia, una línia i 20 px de padding. A la primera fila, alineats per la línia de base i separats com a mínim 24 px, el nom (H3 a les grans, H4 a les estàndard; element h2 al directori i h3 als relacionats) i, a la dreta, la branca d'olivera en terracota amb el nom del distintiu només per als lectors de pantalla. Sota el nom, 8 px, poble · comarca en Metadades oliva; 16 px més avall, la frase en Relat cursiva (màxim 40ch).
+- **Cos:** 20 px sota la fotografia, una línia i 20 px de padding. A la primera fila, alineats per la línia de base i separats com a mínim 24 px, el nom (H3 a les grans, H4 a les estàndard; element h2 al directori i h3 als relacionats) i, a la dreta, la branca d'olivera en burdeus amb el nom del distintiu només per als lectors de pantalla. Sota el nom, 8 px, poble · comarca en Metadades oliva; 16 px més avall, la frase en Relat cursiva (màxim 40ch).
 - **Enllaç:** l'enllaç del nom s'estén sobre tota la targeta, que és clicable sencera.
-- **Hover:** només amb punter, el nom se subratlla (1 px, 0,18em de separació). És l'única resposta: la fotografia no s'escala, no es mou i no canvia de color. El focus és el contorn terracota sobre l'enllaç.
+- **Hover:** només amb punter, el nom se subratlla (1 px, 0,18em de separació). És l'única resposta: la fotografia no s'escala, no es mou i no canvia de color. El focus és el contorn burdeus sobre l'enllaç.
 
 ### Fitxa d'hotel
 El reportatge d'un hotel, amb l'ordre i la graella de Layout.
@@ -420,13 +422,13 @@ La pàgina de color que tanca el reportatge: la sortida cap a la web de l'hotel.
 - **SOJORN** en majúscules i en Spectral amb tracking obert: a escala H1 (300, 0,12em) quan obre la pàgina, amb un marge dret negatiu igual al tracking perquè quedi centrada òpticament, i a mida H5 en pes 400 amb 0,24em al peu i a les capçaleres internes.
 
 ### Focus i selecció
-- **Focus:** contorn d'1 px amb 4 px de separació. Terracota és el valor global; dins de qualsevol element amb `bg-bosc`, una regla base el passa a paper (13,1:1), de manera que cap element enfocable nou no ho ha de declarar.
+- **Focus:** contorn d'1 px amb 4 px de separació. Burdeus és el valor global; dins de qualsevol element amb `bg-bosc`, una regla base el passa a paper (13,1:1), de manera que cap element enfocable nou no ho ha de declarar.
 - **Selecció:** per defecte, fons bosc i text paper; a les seccions bosc s'inverteix a fons paper i text bosc.
 
 ### Moviment
 - **Entrada** (animate-entrada: 900 ms, ease-sojorn, opacitat de 0 a 1 i pujada de 0,75 rem): una sola entrada orquestrada del contingut d'obertura, amb retards de 150 ms i 300 ms per al segon i el tercer element.
 - **Aparició** (animate-aparicio: 280 ms, ease-sojorn, només opacitat de 0 a 1): la recomposició de la graella del directori, o del seu estat buit, després que l'usuari canviï un filtre.
-- **Estat:** 200 ms per als canvis de color de vora i de text, 500 ms per a la línia que creix sota el botó, sempre amb ease-sojorn. Als components interactius, temps curts: 120 ms de repòs abans de seleccionar un territori, 200 ms per al contorn i el color de l'etiqueta del mapa, canvi d'opacitat del panell (text, enllaç i fotografia) en 200 ms d'entrada i 120 ms de sortida, línia i pujada de l'univers en 280 ms d'entrada i 160 ms de sortida, i filet terracota de l'opció triada dels filtres en 200 ms.
+- **Estat:** 200 ms per als canvis de color de vora i de text, 500 ms per a la línia que creix sota el botó, sempre amb ease-sojorn. Als components interactius, temps curts: 120 ms de repòs abans de seleccionar un territori, 200 ms per al contorn i el color de l'etiqueta del mapa, canvi d'opacitat del panell (text, enllaç i fotografia) en 200 ms d'entrada i 120 ms de sortida, línia i pujada de l'univers en 280 ms d'entrada i 160 ms de sortida, i filet burdeus de l'opció triada dels filtres en 200 ms.
 - **Hover:** la variant hover de Tailwind v4 només s'aplica amb `@media (hover: hover)`, i el hover del mapa només respon al ratolí; en pantalla tàctil no hi ha estat de hover. A la targeta d'hotel, el hover és només el subratllat del nom.
 
 **La Regla de l'Aparició.** El directori només es fon quan l'usuari canvia un filtre: mai en carregar la pàgina ni en arribar amb una adreça ja filtrada. És només opacitat, i la barra de filtres i el recompte no es mouen.
@@ -444,7 +446,7 @@ La pàgina de color que tanca el reportatge: la sortida cap a la web de l'hotel.
 - **Do** limita el text de cos a `max-w-mesura` (65ch) i les entradetes a 40ch.
 - **Do** fes servir la cursiva de Spectral per a l'èmfasi i per a les entradetes.
 - **Do** fes servir `text-relat` només en Spectral: romana per al relat de la fitxa (màxim 62ch) i cursiva per a la frase de la targeta (màxim 40ch).
-- **Do** manté la terracota per a focus, enllaços actius, la selecció del mapa (contorn i etiqueta) i el filet de l'opció triada dels filtres sobre paper.
+- **Do** manté el burdeus per a focus, enllaços actius, la selecció del mapa (contorn i etiqueta) i el filet de l'opció triada dels filtres sobre paper.
 - **Do** escriu els noms dels distintius en majúscules amb 0,14em de tracking: en Interfície a la llegenda i als filtres, i a la mida de Metadades a la fitxa de dades. A la targeta només hi va la branca d'olivera, amb el nom per als lectors de pantalla.
 - **Do** dibuixa la cartografia amb traços d'1 px non-scaling-stroke en oliva (30% per a comarques, 45% per al límit) i posa el crèdit de l'ICGC visible sota el mapa.
 - **Do** dona a tot control interactiu nou un equivalent accessible de text, com les etiquetes del mapa, que són pestanyes, o els filtres, que són botons d'opció, i amaga el dibuix decoratiu als lectors de pantalla.
@@ -461,7 +463,7 @@ La pàgina de color que tanca el reportatge: la sortida cap a la web de l'hotel.
 - **Don't** facis servir ombres, radis arrodonits, targetes amb fons ni icones decoratives. La branca d'olivera no és una icona: és el segell de la guia.
 - **Don't** afegeixis un mode fosc: un camp bosc és un bloc de color de la pàgina, no un tema.
 - **Don't** posis una etiqueta petita en majúscules sobre un titular; el titular parla sol. Les metadades (Empordà · Girona) van sota o al costat del nom, no com a avantsala.
-- **Don't** facis servir la terracota en superfícies grans ni sobre bosc, ni el pedra-500 per a text petit.
+- **Don't** facis servir el burdeus en superfícies grans ni sobre bosc, ni el pedra-500 per a text petit.
 - **Don't** omplis cap comarca ni cap territori del mapa amb color, ni en repòs ni en selecció.
 - **Don't** facis que sortir del mapa desfaci la selecció, ni afegeixis una llista de territoris al costat del mapa: la selecció del mapa es fa sobre el mateix mapa. Els filtres del directori són una altra pàgina.
 - **Don't** donis cursor de punter a elements que no enllacen, com les entrades dels universos.

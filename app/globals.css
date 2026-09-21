@@ -16,25 +16,27 @@
   --text-*: initial;
 
   /* Color de marca */
-  --color-paper: #f8f4ec;
-  --color-bosc: #262c1f;
-  --color-oliva: #5a5744;
-  --color-terracota: #94513a;
+  --color-paper: #EFE8DA;
+  --color-bosc: #2A2011;
+  --color-oliva: #584E3B;
+  --color-burdeus: #6E2E29;
+  /* Or: només línies i vores sobre camp bosc, mai text (3,3:1 sobre bosc). */
+  --color-or: #946A34;
 
-  /* Pedra: grisos càlids, OKLCH to 95 */
-  --color-pedra-50: #edebe2;
-  --color-pedra-100: #e4e1d6;
-  --color-pedra-200: #d6d3c6;
-  --color-pedra-300: #c1beb0;
-  --color-pedra-400: #a6a292;
-  --color-pedra-500: #848072;
-  --color-pedra-600: #6d695b;
-  --color-pedra-700: #565346;
-  --color-pedra-800: #3d3b30;
-  --color-pedra-900: #29261e;
+  /* Pedra: de la crema al terra fosc de la paleta, en tons càlids */
+  --color-pedra-50: #E6DED0;
+  --color-pedra-100: #DDD4C3;
+  --color-pedra-200: #CFC5B0;
+  --color-pedra-300: #C1B094;
+  --color-pedra-400: #A69A80;
+  --color-pedra-500: #8A7F66;
+  --color-pedra-600: #6F6650;
+  --color-pedra-700: #5C5240;
+  --color-pedra-800: #42392B;
+  --color-pedra-900: #35261F;
 
   /* Línia fina: oliva al 20% */
-  --color-linia: rgb(90 87 68 / 0.2);
+  --color-linia: rgb(88 78 59 / 0.2);
 
   /* Escala tipogràfica */
   --text-h1: clamp(3.75rem, 0.5rem + 8vw, 7.5rem);
@@ -302,11 +304,11 @@
   }
 
   :focus-visible {
-    outline: 1px solid var(--color-terracota);
+    outline: 1px solid var(--color-burdeus);
     outline-offset: 4px;
   }
 
-  /* Sobre bosc, la terracota no arriba a 3:1: el focus passa a paper. */
+  /* Sobre bosc, la burdeus no arriba a 3:1: el focus passa a paper. */
   .bg-bosc :focus-visible {
     outline-color: var(--color-paper);
   }

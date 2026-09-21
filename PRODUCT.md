@@ -50,14 +50,15 @@ Sojorn no és una OTA (tipus Booking) ni un agregador de ressenyes. Té autorita
 - **Descriptor:** "Una guia d'hotels amb encant a Catalunya."
 - **Veu:** un expert que recomana un lloc a un amic, no un comercial. Concret, en primera persona del plural, serè, sense superlatius buits ni urgència comercial.
 - **Referència completa:** `SOJORN_BRAND_GUIDELINES.md` (manifest, to, criteris). Font original: `docs/references/sojorn.pdf`. Referències visuals: `docs/references/WhatsApp Image *.jpeg`.
-- **Tokens pinats per l'usuari:**
+- **Tokens pinats per l'usuari** (paleta renovada el 21/09/2026 a partir de `docs/references/PALETA COLORS-2.pdf`: Deep Forest, Gold, Old Burgundy, Dark Olive i les cremes i pedres del moodboard):
 
   | Rol | Token | Valor |
   |---|---|---|
-  | Fons global | Paper | `#F8F4EC` |
-  | Text principal | Verd bosc | `#262C1F` |
-  | Text secundari | Oliva | `#5A5744` |
-  | Accents | Terracota | `#94513A` |
+  | Fons global | Paper | `#EFE8DA` |
+  | Text principal | Bosc | `#2A2011` |
+  | Text secundari | Oliva | `#584E3B` |
+  | Accents | Burdeus | `#6E2E29` |
+  | Línies sobre bosc | Or | `#946A34` |
   | Titulars (serif) | — | Spectral (substitueix Cormorant Garamond, que desplaça els accents catalans en totes les versions publicades) |
   | Cos i UI (sans) | — | Geist |
 

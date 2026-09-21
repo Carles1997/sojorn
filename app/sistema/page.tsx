@@ -71,23 +71,24 @@ const escala = [
 ];
 
 const colors = [
-  { nom: "Paper", hex: "#F8F4EC", us: "Fons global", classe: "bg-paper border" },
-  { nom: "Verd bosc", hex: "#262C1F", us: "Text principal, 13,1:1", classe: "bg-bosc" },
-  { nom: "Oliva", hex: "#5A5744", us: "Text secundari, 6,6:1", classe: "bg-oliva" },
-  { nom: "Terracota", hex: "#94513A", us: "Accents, 5,5:1", classe: "bg-terracota" },
+  { nom: "Paper", hex: "#EFE8DA", us: "Fons global", classe: "bg-paper border" },
+  { nom: "Bosc", hex: "#2A2011", us: "Text principal, 13,1:1", classe: "bg-bosc" },
+  { nom: "Oliva", hex: "#584E3B", us: "Text secundari, 6,7:1", classe: "bg-oliva" },
+  { nom: "Burdeus", hex: "#6E2E29", us: "Accent, 8,3:1", classe: "bg-burdeus" },
+  { nom: "Or", hex: "#946A34", us: "Línies sobre bosc, 3,3:1", classe: "bg-or" },
 ];
 
 const pedra = [
-  { pas: "50", hex: "#EDEBE2", classe: "bg-pedra-50" },
-  { pas: "100", hex: "#E4E1D6", classe: "bg-pedra-100" },
-  { pas: "200", hex: "#D6D3C6", classe: "bg-pedra-200" },
-  { pas: "300", hex: "#C1BEB0", classe: "bg-pedra-300" },
-  { pas: "400", hex: "#A6A292", classe: "bg-pedra-400" },
-  { pas: "500", hex: "#848072", classe: "bg-pedra-500" },
-  { pas: "600", hex: "#6D695B", classe: "bg-pedra-600" },
-  { pas: "700", hex: "#565346", classe: "bg-pedra-700" },
-  { pas: "800", hex: "#3D3B30", classe: "bg-pedra-800" },
-  { pas: "900", hex: "#29261E", classe: "bg-pedra-900" },
+  { pas: "50", hex: "#E6DED0", classe: "bg-pedra-50" },
+  { pas: "100", hex: "#DDD4C3", classe: "bg-pedra-100" },
+  { pas: "200", hex: "#CFC5B0", classe: "bg-pedra-200" },
+  { pas: "300", hex: "#C1B094", classe: "bg-pedra-300" },
+  { pas: "400", hex: "#A69A80", classe: "bg-pedra-400" },
+  { pas: "500", hex: "#8A7F66", classe: "bg-pedra-500" },
+  { pas: "600", hex: "#6F6650", classe: "bg-pedra-600" },
+  { pas: "700", hex: "#5C5240", classe: "bg-pedra-700" },
+  { pas: "800", hex: "#42392B", classe: "bg-pedra-800" },
+  { pas: "900", hex: "#35261F", classe: "bg-pedra-900" },
 ];
 
 export default function SistemaPage() {

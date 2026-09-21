@@ -61,7 +61,7 @@ function GrupFiltre<T extends string>({
         {totes.map((opcio) => (
           <label
             key={opcio.valor ?? "tots"}
-            className="relative cursor-pointer py-1.5 text-ui text-oliva transition-colors duration-200 ease-sojorn hover:text-bosc has-checked:text-bosc has-focus-visible:outline has-focus-visible:outline-offset-4 has-focus-visible:outline-terracota"
+            className="relative cursor-pointer py-1.5 text-ui text-oliva transition-colors duration-200 ease-sojorn hover:text-bosc has-checked:text-bosc has-focus-visible:outline has-focus-visible:outline-offset-4 has-focus-visible:outline-burdeus"
           >
             <input
               type="radio"
@@ -76,7 +76,7 @@ function GrupFiltre<T extends string>({
             </span>
             <span
               aria-hidden="true"
-              className="absolute inset-x-0 bottom-0 h-px origin-left scale-x-0 bg-terracota transition-transform duration-200 ease-sojorn peer-checked:scale-x-100 motion-reduce:transition-none"
+              className="absolute inset-x-0 bottom-0 h-px origin-left scale-x-0 bg-burdeus transition-transform duration-200 ease-sojorn peer-checked:scale-x-100 motion-reduce:transition-none"
             />
           </label>
         ))}

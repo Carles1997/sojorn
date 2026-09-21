@@ -110,7 +110,7 @@ export function MapaInteractiu({ territoris, geo, fons, linies, amplada, alcada 
           <svg viewBox={`0 0 ${amplada} ${alcada}`} aria-hidden="true" className="block h-auto w-full">
             {fons}
 
-            {/* Contorn del territori: traç de 2 px de terracota tapat per dins amb el paper del mateix
+            {/* Contorn del territori: traç de 2 px de burdeus tapat per dins amb el paper del mateix
                 territori, de manera que només en queda visible la meitat exterior i desapareixen les
                 vores internes. Cada territori és una unitat (traç + paper) i el seleccionat es dibuixa
                 l'últim, perquè el paper dels veïns no li tapi el contorn. */}
@@ -120,7 +120,7 @@ export function MapaInteractiu({ territoris, geo, fons, linies, amplada, alcada 
                 <g key={t.id} pointerEvents="none">
                   <g
                     style={{ strokeOpacity: opacitat }}
-                    className="text-terracota transition-[stroke-opacity] duration-200 ease-sojorn"
+                    className="text-burdeus transition-[stroke-opacity] duration-200 ease-sojorn"
                   >
                     {geo[t.id].zones.map((d, i) => (
                       <path
@@ -190,7 +190,7 @@ export function MapaInteractiu({ territoris, geo, fons, linies, amplada, alcada 
                   onPointerEnter={(event) => entrar(event, t.id)}
                   onPointerLeave={sortir}
                   className={`pointer-events-auto absolute top-(--ye) left-(--xe) -translate-x-1/2 -translate-y-1/2 cursor-pointer bg-paper after:absolute after:-inset-x-1.5 after:-inset-y-1 @min-[640px]:top-(--y) @min-[640px]:left-(--x) font-serif text-meta whitespace-nowrap italic transition-colors duration-200 ease-sojorn ${
-                    seleccionat ? "text-terracota" : "text-oliva"
+                    seleccionat ? "text-burdeus" : "text-oliva"
                   }`}
                 >
                   {t.nom}
