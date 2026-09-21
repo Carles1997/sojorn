@@ -60,7 +60,7 @@ export default async function FitxaHotel({ params }: PageProps<"/hotels/[slug]">
                 <div className="grid grid-cols-[6.5rem_1fr] gap-4 border-y py-3">
                   <dt className="text-oliva">Distintiu</dt>
                   <dd className="flex items-center gap-3">
-                    <MarcaDistintiu nivell={marca.nivell} contorn={marca.id === "icon"} className="text-oliva" />
+                    <MarcaDistintiu nivell={marca.nivell} className="text-oliva" />
                     <span className="tracking-[0.14em] uppercase">{marca.nom}</span>
                   </dd>
                 </div>

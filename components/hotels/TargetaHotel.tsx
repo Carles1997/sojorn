@@ -53,7 +53,7 @@ export function TargetaHotel({
             </Link>
           </Titol>
           <span className="shrink-0">
-            <MarcaDistintiu nivell={marca.nivell} contorn={marca.id === "icon"} className="text-oliva" />
+            <MarcaDistintiu nivell={marca.nivell} className="text-oliva" />
             <span className="sr-only">{marca.nom}</span>
           </span>
         </div>

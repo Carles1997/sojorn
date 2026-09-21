@@ -109,27 +109,29 @@ export default function Home() {
 
       <section id="guia" aria-labelledby="guia-titol">
         <div className="mx-auto max-w-pagina px-marge py-seccio">
-          <h2 id="guia-titol" className="max-w-[20ch]">
-            No som una llista d&apos;hotels.{" "}
-            <em>Som criteri i referència.</em>
-          </h2>
-          <div className="mt-8 max-w-[46ch] space-y-4 text-oliva">
-            <p>
-              En un món on tot es pot comparar, creiem que encara hi ha lloc per
-              al criteri.
-            </p>
-            <p>
-              Sojorn neix precisament per això: per mirar, descobrir i
-              seleccionar amb criteri.
-            </p>
-            <p>
-              No volem reunir-ho tot. Volem reunir allò que mereix ser
-              descobert.
-            </p>
-            <p>
-              Hotels amb identitat, arrels i una manera pròpia de viure el
-              territori.
-            </p>
+          <div className="grid grid-cols-12 gap-x-6 gap-y-10 lg:items-end">
+            <h2 id="guia-titol" className="col-span-12 max-w-[18ch] lg:col-span-6">
+              No som una llista d&apos;hotels.{" "}
+              <em>Som criteri i referència.</em>
+            </h2>
+            <div className="col-span-12 max-w-[46ch] space-y-3 text-oliva lg:col-span-5 lg:col-start-8">
+              <p>
+                En un món on tot es pot comparar, creiem que encara hi ha lloc per
+                al criteri.
+              </p>
+              <p>
+                Sojorn neix precisament per això: per mirar, descobrir i
+                seleccionar amb criteri.
+              </p>
+              <p>
+                No volem reunir-ho tot. Volem reunir allò que mereix ser
+                descobert.
+              </p>
+              <p>
+                Hotels amb identitat, arrels i una manera pròpia de viure el
+                territori.
+              </p>
+            </div>
           </div>
 
           <div className="mt-24 grid grid-cols-12 gap-x-6 gap-y-10">
@@ -150,7 +152,6 @@ export default function Home() {
                     <dt>
                       <MarcaDistintiu
                         nivell={distintiu.nivell}
-                        contorn={excepcional}
                         mida="h-8"
                         className="text-oliva"
                       />
@@ -194,12 +195,16 @@ export default function Home() {
       <section id="universos" aria-labelledby="universos-titol">
         <div className="mx-auto max-w-pagina px-marge pb-seccio">
           <Divider className="mb-seccio" />
-          <h2 id="universos-titol">Els universos</h2>
-          <p className="mt-6 font-serif text-entradeta italic">
-            Maneres de viure el territori
-          </p>
-          <div className="mt-16">
-            <IndexUniversos />
+          <div className="grid grid-cols-12 gap-x-6 gap-y-12">
+            <div className="col-span-12 lg:col-span-4">
+              <h2 id="universos-titol">Els universos</h2>
+              <p className="mt-6 font-serif text-entradeta italic">
+                Maneres de viure el territori
+              </p>
+            </div>
+            <div className="col-span-12 lg:col-span-7 lg:col-start-6">
+              <IndexUniversos />
+            </div>
           </div>
         </div>
       </section>
@@ -208,7 +213,7 @@ export default function Home() {
         <section aria-label="La idea central">
           <div className="mx-auto max-w-pagina px-marge py-seccio-amplia">
             <p className="mx-auto max-w-[24ch] text-center font-serif text-h2 text-balance">
-              No seleccionem hotels perquè són bons.{" "}
+              No seleccionem hotels només perquè són bons.{" "}
               <em>
                 Els seleccionem perquè expliquen alguna cosa del lloc on són.
               </em>

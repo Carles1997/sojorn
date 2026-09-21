@@ -21,7 +21,7 @@ L'èxit és que l'usuari recorri: m'inspira → em genera confiança → descobr
 
 Sojorn no és una OTA (tipus Booking) ni un agregador de ressenyes. Té autoritat pròpia: no vol la selecció més gran sinó l'adequada. Cada hotel es justifica amb criteri editorial signat per Sojorn ("Per què l'hem seleccionat", "El nostre criteri"), no amb notes mitjanes d'usuaris.
 
-> No seleccionem hotels perquè són bons. Els seleccionem perquè expliquen alguna cosa del lloc on són.
+> No seleccionem hotels només perquè són bons. Els seleccionem perquè expliquen alguna cosa del lloc on són.
 
 ## Operating Context
 

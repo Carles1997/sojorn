@@ -18,7 +18,7 @@ related_targets: ["components/Divider.tsx","components/home"]
 - Audiència: viatger amb criteri en el primer contacte amb Sojorn.
 - Acció: `DESCOBREIX LA SELECCIÓ`, que fa un salt a Catalunya (`#catalunya`), la primera secció de descoberta (confirmat per l'usuari).
 - Prova: textos del document de marca (`docs/references/sojorn.pdf`), sense text afegit pel constructor. La fotografia del hero és un placeholder d'Unsplash (Ben Steele, Torroja del Priorat, Unsplash License). El mapa es genera a partir de les comarques de l'ICGC (CC BY 4.0, amb crèdit visible).
-- Restriccions: tokens de DESIGN.md; sense ombres ni radis; línies d'1 px; espaiat `py-seccio`; criteris sense numeració; tres distintius amb Icon discret; quatre universos (La Taula, La Història, El Camí, La Família) en targetes que giren per mostrar una foto; els universos no són enllaços mentre no tinguin pàgina (sense cursor d'enllaç).
+- Restriccions: tokens de DESIGN.md; sense ombres ni radis; línies d'1 px; espaiat `py-seccio`; criteris sense numeració; tres distintius amb la mateixa branca d'olivera plena (1, 2 i 3); quatre universos (La Taula, La Història, El Camí, La Família) en un sumari obert que gira per mostrar una foto; els universos no són enllaços mentre no tinguin pàgina (sense cursor d'enllaç).
 - Tipografia serif: Spectral (Cormorant desplaça els accents catalans en totes les versions publicades).
 - Territoris del mapa: Empordà (Alt i Baix Empordà), Garrotxa, Pirineus (Val d'Aran, Alta Ribagorça, Pallars Sobirà, Pallars Jussà, Alt Urgell, Cerdanya), Priorat, Penedès (Alt i Baix Penedès, Garraf), Terres de l'Ebre (Baix Ebre, Montsià, Ribera d'Ebre, Terra Alta). Confirmat per l'usuari.
 

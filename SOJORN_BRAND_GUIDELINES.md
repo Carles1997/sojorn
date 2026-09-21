@@ -11,7 +11,7 @@ Document de referència per a tot el disseny i el desenvolupament de Sojorn. Ext
 
 **Sojorn no és una plataforma per reservar hotels. És la guia de referència per descobrir els hotels amb encant de Catalunya.** La reserva és la conseqüència, no el punt de partida.
 
-> *No seleccionem hotels perquè són bons. Els seleccionem perquè expliquen alguna cosa del lloc on són.*
+> *No seleccionem hotels només perquè són bons. Els seleccionem perquè expliquen alguna cosa del lloc on són.*
 
 Aquesta frase és la columna vertebral de la marca. Qualsevol decisió (de producte, de disseny o de text) s'hi ha de poder justificar.
 

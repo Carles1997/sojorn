@@ -279,7 +279,7 @@ Els camps s'alternen per blocs. A la home, la fotografia sobre bosc i el manifes
 ### Named Rules
 **La Regla de l'Aire.** Dues seccions mai no se separen amb menys de 96 px. Si una pantalla sembla buida, és correcte; si sembla plena, sobra contingut.
 
-**La Regla de la Línia.** Les divisions es fan amb una línia d'1 px (o amb espai), mai amb caixes, fons de targeta o ombres. Sobre paper la línia és oliva al 20%; sobre bosc, paper al 20%. Per defecte s'usa una sola línia per canvi de grup, no una a cada fila. L'excepció són les llistes d'entrades paral·leles que es llegeixen com un índex: la llista de criteris del manifest porta un Divider sobre cada fila i un de tancament sota l'última; els universos de la home, en canvi, són quatre targetes amb marc d'1 px que giren (vegeu Índex d'universos), l'única excepció. A la fitxa d'hotel, les dades, la informació pràctica, els criteris i els universos porten una línia sobre la llista i una sota cada fila; la barra de filtres del directori porta una línia a dalt, una a baix i una entre grups.
+**La Regla de la Línia.** Les divisions es fan amb una línia d'1 px (o amb espai), mai amb caixes, fons de targeta o ombres. Sobre paper la línia és oliva al 20%; sobre bosc, paper al 20%. Per defecte s'usa una sola línia per canvi de grup, no una a cada fila. L'excepció són les llistes d'entrades paral·leles que es llegeixen com un índex: la llista de criteris del manifest porta un Divider sobre cada fila i un de tancament sota l'última; els universos de la home, en canvi, són quatre entrades obertes sobre un filet superior que giren per mostrar una fotografia (vegeu Índex d'universos). A la fitxa d'hotel, les dades, la informació pràctica, els criteris i els universos porten una línia sobre la llista i una sota cada fila; la barra de filtres del directori porta una línia a dalt, una a baix i una entre grups.
 
 **La Regla del Filet entre Papers.** Dues seccions de paper consecutives se separen amb un Divider en color línia i l'espai `seccio` a banda i banda (el padding inferior de la secció anterior i un marge igual sota el filet). El canvi entre paper i bosc no porta filet: el canvi de camp ja és la divisió.
 
@@ -340,14 +340,15 @@ Rectangular, pla i tipogràfic: l'acció principal quan viu dins d'un camp bosc 
 - **Entre seccions:** el mateix Divider separa dues seccions de paper consecutives, segons La Regla del Filet entre Papers.
 
 ### Índex d'universos
-Quatre targetes en dues columnes i dues files, que giren per mostrar una fotografia. És l'única excepció a La Regla de la Línia: aquí sí hi ha targeta, però és un marc d'1 px sense fons, sense ombra i d'angle recte.
-- **Graella:** a partir de 768 px, 2 columnes amb 24 px de separació; per sota, una sola. Cada targeta fa 3:2 a partir de 1024 px i 304 px d'alçada per sota (l'alçada fixa evita que el text reculi en girar).
-- **Anvers:** marc d'1 px en color línia sobre paper, amb 32 px de padding (40 px a partir de 1024 px). A dalt, el nom en H3 (H2 a partir de 1280 px), en bosc. A baix, el lema en Entradeta en Geist negreta ("Menjar el territori") i, 12 px més avall, la descripció en Cos oliva (màxim 32ch, amb dues línies d'alçada reservades, de manera que els lemes queden a la mateixa altura a totes les targetes).
-- **Revers:** una fotografia de color natural amb foto-editorial, sense marc ni text, a tota la targeta. Sota la graella, una línia en Metadades oliva credita els fotògrafs.
-- **Gir:** rotació de 180° sobre l'eix vertical (rotateY) en 750 ms amb ease-gir, cubic-bezier(0.65, 0, 0.35, 1), la corba d'un moviment sobre la pantalla: arrenca i acaba suau. La perspectiva és de 1600 px. El hover recau sobre l'element fix i no sobre el que gira, de manera que el gir no fa parpellejar la zona sensible. En treure el ratolí, torna amb el mateix gest. Les dues cares són al DOM: el text sempre és llegible, també amb lector de pantalla.
-- **Tàctil:** sense hover, tocar la targeta la gira i tornar-hi la desgira. Només una targeta a la vegada.
+Quatre entrades en dues columnes i dues files, com un sumari obert: cada una és un text sobre un filet superior, sense marc ni fons. En passar-hi el ratolí, l'entrada gira sobre si mateixa i mostra una fotografia. Les targetes de la home d'abans, amb marc, s'han substituït per aquest sumari perquè la retícula de caixes resultava massa rígida.
+- **Composició:** a partir de 1024 px, el titular "Els universos" i el subtítol en Entradeta cursiva ocupen les 4 primeres columnes i el sumari, 7 columnes des de la sisena; per sota, s'apilen. Dins del sumari, 2 columnes amb 32 px de separació a partir de 768 px i una sola per sota, amb 40 px entre files.
+- **Anvers:** filet d'1 px en color línia a dalt i 24 px de padding. El nom en H4 en bosc, 12 px més avall el lema en Interfície negreta i, 4 px més avall, la descripció en Cos oliva (màxim 30ch). Els tres textos van junts: el buit queda sota el text, no entre el nom i la descripció.
+- **Alçada:** 176 px per sota de 768 px i 224 px a partir d'aquí; és l'alçada de la fotografia i evita que el text recorti en girar. Amb la retícula, la fotografia fa uns 360 × 224 px.
+- **Revers:** una fotografia de color natural amb foto-editorial, sense marc ni text, a tota la targeta. Sota el sumari, una línia en Metadades oliva credita els fotògrafs.
+- **Gir:** rotació de 180° sobre l'eix vertical (rotateY) en 750 ms amb ease-gir, cubic-bezier(0.65, 0, 0.35, 1), la corba d'un moviment sobre la pantalla: arrenca i acaba suau. Perspectiva de 1600 px. El hover recau sobre l'element fix i no sobre el que gira, de manera que el gir no fa parpellejar la zona sensible. En treure el ratolí, torna amb el mateix gest. Les dues cares són al DOM: el text sempre és llegible, també amb lector de pantalla.
+- **Tàctil:** sense hover, tocar l'entrada la gira i tornar-hi la desgira. Només una a la vegada.
 - **Moviment reduït:** cap gir; les cares s'intercanvien amb un fos de 200 ms.
-- **Sense enllaç:** mentre no hi hagi pàgines d'univers, les targetes no són enllaços i no porten cursor de punter.
+- **Sense enllaç:** mentre no hi hagi pàgines d'univers, les entrades no són enllaços i no porten cursor de punter.
 
 ### Mapa editorial
 Una il·lustració cartogràfica de revista: el territori es llegeix pel traç, mai pel color.
@@ -364,7 +365,7 @@ Una il·lustració cartogràfica de revista: el territori es llegeix pel traç, 
 ### Llegenda de distintius
 - **Estructura:** tres entrades en una llista de definicions al costat de "La Guia Sojorn" (H4, amb una línia en Metadades oliva de màxim 28ch, a 3 de 12 columnes a partir de 1024 px). A partir de 768 px, una fila de tres amb una línia a sobre i filets verticals només entre entrades (32 px de padding lateral, cap a l'exterior de la primera); per sota, una llista apilada amb una línia a sobre i una entre entrades. 32 px de padding vertical.
 - **Entrada:** la branca d'olivera, el nom en Interfície majúscula amb 0,14em de tracking, 16 px per sota, i una descripció curta en Cos oliva (màxim 30ch) 12 px més avall.
-- **Branca d'olivera (MarcaDistintiu):** dibuix del client (`docs/references/motiu_vegetal_fons_transparent.svg`), un sol traçat sense fons amb el viewBox ajustat al dibuix (proporció 1,41:1). Color oliva. Repetida d'1 a 3 vegades amb 10 px entre còpies i oculta als lectors de pantalla, perquè el nom ja diu el nivell. Mida per context: 32 px d'alçada a la llegenda de la home i 20 px a les targetes, als filtres i a la fitxa de dades. Selection (1) i Signature (2) la porten plena; Icon (3) només en porta el contorn d'1 px (non-scaling-stroke), el tractament discret, i afegeix la nota "Només per a casos molt especials." en Metadades.
+- **Branca d'olivera (MarcaDistintiu):** dibuix del client (`docs/references/motiu_vegetal_fons_transparent.svg`), un sol traçat sense fons amb el viewBox ajustat al dibuix (proporció 1,41:1). Color oliva. Repetida d'1 a 3 vegades amb 10 px entre còpies i oculta als lectors de pantalla, perquè el nom ja diu el nivell. Mida per context: 32 px d'alçada a la llegenda de la home i 20 px a les targetes, als filtres i a la fitxa de dades. Selection (1), Signature (2) i Icon (3) la porten plena i del mateix color; el nivell només es distingeix pel nombre de branques. Icon afegeix la nota "Només per a casos molt especials." en Metadades.
 - **Sense nivells grisos:** no hi ha branques inactives ni en pedra; el nivell es compta pel nombre de marques.
 
 ### Filtres del directori
@@ -430,7 +431,7 @@ La pàgina de color que tanca el reportatge: la sortida cap a la web de l'hotel.
 
 **La Regla de l'Aparició.** El directori només es fon quan l'usuari canvia un filtre: mai en carregar la pàgina ni en arribar amb una adreça ja filtrada. És només opacitat, i la barra de filtres i el recompte no es mouen.
 
-**La Regla del Moviment Reduït.** Amb `prefers-reduced-motion: reduce`, animate-entrada val `none` i el contingut és visible des del primer moment. El desplaçament suau cap a les àncores només s'activa amb `no-preference`. No hi ha cap anul·lació global de durades: cada animació declara el seu estat reduït. Les respostes de color i opacitat es mantenen, i per això animate-aparicio, que és només opacitat, no canvia; la línia que creix sota el botó sobre bosc es fon en lloc de dibuixar-se, la targeta d'univers no gira i intercanvia les cares amb un fos de 200 ms i el filet de l'opció triada dels filtres apareix sense transició.
+**La Regla del Moviment Reduït.** Amb `prefers-reduced-motion: reduce`, animate-entrada val `none` i el contingut és visible des del primer moment. El desplaçament suau cap a les àncores només s'activa amb `no-preference`. No hi ha cap anul·lació global de durades: cada animació declara el seu estat reduït. Les respostes de color i opacitat es mantenen, i per això animate-aparicio, que és només opacitat, no canvia; la línia que creix sota el botó sobre bosc es fon en lloc de dibuixar-se, la entrada d'univers no gira i intercanvia les cares amb un fos de 200 ms i el filet de l'opció triada dels filtres apareix sense transició.
 
 ## Do's and Don'ts
 
@@ -438,7 +439,7 @@ La pàgina de color que tanca el reportatge: la sortida cap a la web de l'hotel.
 - **Do** fes servir `bg-paper` com a fons únic de pàgina i `text-bosc` com a tinta per defecte.
 - **Do** separa continguts amb `border-t` (el color de vora per defecte ja és oliva al 20%) o amb espai; sobre bosc, amb `border-paper/20`.
 - **Do** fes servir `<Divider/>` (amb `on="bosc"` sobre bosc) a la llista de criteris, una línia per fila i una de tancament, i entre dues seccions de paper consecutives, amb l'espai `seccio` a banda i banda.
-- **Do** a la home, deixa els universos en quatre targetes de dues columnes que giren sobre si mateixes per mostrar una fotografia; el gir és només rotateY i mai canvia l'alçada de la targeta.
+- **Do** a la home, deixa els universos com un sumari obert de quatre entrades en dues columnes, que giren sobre si mateixes per mostrar una fotografia; el gir és només rotateY i mai canvia l'alçada.
 - **Do** dona a cada secció `py-seccio` i reserva `py-seccio-amplia` per als moments de pausa.
 - **Do** limita el text de cos a `max-w-mesura` (65ch) i les entradetes a 40ch.
 - **Do** fes servir la cursiva de Spectral per a l'èmfasi i per a les entradetes.
@@ -463,7 +464,7 @@ La pàgina de color que tanca el reportatge: la sortida cap a la web de l'hotel.
 - **Don't** facis servir la terracota en superfícies grans ni sobre bosc, ni el pedra-500 per a text petit.
 - **Don't** omplis cap comarca ni cap territori del mapa amb color, ni en repòs ni en selecció.
 - **Don't** facis que sortir del mapa desfaci la selecció, ni afegeixis una llista de territoris al costat del mapa: la selecció del mapa es fa sobre el mateix mapa. Els filtres del directori són una altra pàgina.
-- **Don't** donis cursor de punter a elements que no enllacen, com les targetes dels universos.
+- **Don't** donis cursor de punter a elements que no enllacen, com les entrades dels universos.
 - **Don't** representis nivells inactius dels distintius amb estrelles grises; el nivell es compta pel nombre de marques.
 - **Don't** reintroduïssis la paleta de colors per defecte de Tailwind (zinc, stone, etc.); no existeix al tema.
 - **Don't** barregis famílies dins d'un titular.
