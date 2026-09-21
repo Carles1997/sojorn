@@ -26,7 +26,7 @@ Sojorn no és una OTA (tipus Booking) ni un agregador de ressenyes. Té autorita
 ## Operating Context
 
 - **Sojorn com a guia i prescriptor:** Sojorn no té motor de reserves propi ni processa pagaments. Cada fitxa d'hotel acaba amb les dades de contacte i un enllaç exterior a la web oficial o de reserva de l'hotel; la reserva i el pagament es fan directament amb l'hotel.
-- **Descoberta organitzada com una guia:** per territoris (Empordà, Garrotxa, Pirineus, Priorat, Penedès, Terres de l'Ebre…), per universos Sojorn (La Taula, El Paisatge, La Història, El Camí, El Silenci, El Romanticisme, La Terra) i per distintius.
+- **Descoberta organitzada com una guia:** per territoris (Empordà, Garrotxa, Pirineus, Priorat, Penedès, Terres de l'Ebre…), per universos Sojorn (La Taula, La Història, El Camí, La Família: maneres de viure el territori) i per distintius.
 
 ## Capabilities and Constraints
 
@@ -46,7 +46,7 @@ Sojorn no és una OTA (tipus Booking) ni un agregador de ressenyes. Té autorita
 ## Brand Commitments
 
 - **Nom:** SOJORN.
-- **Claim:** "Dormir en un lloc. Viure un territori."
+- **Claim:** "Dormir en un destí. Viure un territori."
 - **Descriptor:** "Una guia d'hotels amb encant a Catalunya."
 - **Veu:** un expert que recomana un lloc a un amic, no un comercial. Concret, en primera persona del plural, serè, sense superlatius buits ni urgència comercial.
 - **Referència completa:** `SOJORN_BRAND_GUIDELINES.md` (manifest, to, criteris). Font original: `docs/references/sojorn.pdf`. Referències visuals: `docs/references/WhatsApp Image *.jpeg`.

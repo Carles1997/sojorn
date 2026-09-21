@@ -10,7 +10,7 @@ const escala = [
     rol: "H1",
     detall: "Spectral 300, de 60 a 120 px",
     classe: "font-serif text-h1",
-    mostra: "Dormir en un lloc.",
+    mostra: "Dormir en un destí.",
   },
   {
     rol: "H2",
@@ -100,7 +100,7 @@ export default function SistemaPage() {
 
       <section className="grid grid-cols-12 gap-x-6 pt-24 pb-seccio">
         <h1 className="col-span-12 lg:col-span-11">
-          Dormir en un lloc. <em>Viure un territori.</em>
+          Dormir en un destí. <em>Viure un territori.</em>
         </h1>
         <p className="col-span-12 mt-16 max-w-[34ch] text-oliva sm:col-span-8 lg:col-span-4 lg:col-start-8">
           Una guia d&apos;hotels amb encant a Catalunya. Cada hotel hi és perquè

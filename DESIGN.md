@@ -92,11 +92,11 @@ components:
     typography: "{typography.ui}"
     rounded: "{rounded.none}"
     padding: "16px 32px"
-  univers-cella:
+  univers-targeta:
     textColor: "{colors.bosc}"
     typography: "{typography.h3}"
     rounded: "{rounded.none}"
-    padding: "56px 40px"
+    padding: "40px"
   univers-descripcio:
     textColor: "{colors.oliva}"
     typography: "{typography.cos}"
@@ -118,8 +118,8 @@ components:
     textColor: "{colors.bosc}"
     typography: "{typography.ui}"
   distintiu-marca:
-    textColor: "{colors.terracota}"
-    size: "12px"
+    textColor: "{colors.oliva}"
+    size: "20px"
   capcalera-enllac:
     textColor: "{colors.oliva}"
     typography: "{typography.ui}"
@@ -207,7 +207,7 @@ Una paleta de territori: paper, bosc i oliva estructuren; la terracota només ap
 - **Oliva** (oliva): text secundari, descripcions, metadades, peus de foto, etiquetes del mapa, llegendes i opcions en repòs dels filtres sobre paper. Contrast de 6,6:1 sobre paper. És també el color de les línies sobre paper, al 20%, i de la cartografia: límits de comarca al 30% i contorn de Catalunya al 45%. La línia que es dibuixa en hover sobre una cel·la d'univers és oliva sòlid. Sobre bosc, el text secundari és pedra-200.
 
 ### Tertiary
-- **Terracota** (terracota): accent escàs sobre paper. Focus, enllaç actiu, la marca ✦ dels distintius (plena o només en contorn) i detalls d'1 px, com la selecció del mapa (contorn del territori i etiqueta seleccionada), el filet sota l'opció triada dels filtres del directori i el subratllat de la secció activa a la capçalera interna. Contrast de 5,5:1 sobre paper, vàlid per a text petit. Sobre bosc no funciona (uns 2,3:1): allà el focus és paper.
+- **Terracota** (terracota): accent escàs sobre paper. Focus, enllaç actiu, detalls d'1 px, com la selecció del mapa (contorn del territori i etiqueta seleccionada), el filet sota l'opció triada dels filtres del directori i el subratllat de la secció activa a la capçalera interna. Contrast de 5,5:1 sobre paper, vàlid per a text petit. Sobre bosc no funciona (uns 2,3:1): allà el focus és paper.
 
 ### Neutral
 - **Paper** (paper): fons global de tot el lloc, text sobre camps bosc (13,1:1), línies sobre bosc al 20% i focus sobre bosc.
@@ -233,7 +233,7 @@ Una paleta de territori: paper, bosc i oliva estructuren; la terracota només ap
 ### Hierarchy
 - **H1** (300, de 60 a 120 px, 1,02): el titular principal d'una pantalla, com el claim, el nom d'un hotel a la seva fitxa o el d'un territori. N'hi ha un per pàgina. Al directori, que és un índex, l'H1 ("La selecció") fa servir l'escala H2, centrat.
 - **H2** (300, de 44 a 68 px, 1,06): obertura de secció, com L'Essència a la fitxa, i el nom de l'hotel al tancament bosc.
-- **H3** (400, de 34 a 48 px, 1,1): subseccions i blocs d'una fitxa ("Per què l'hem triat", "Els seus universos", "L'hotel en imatges" i els hotels relacionats), el nom d'una targeta d'hotel gran, els noms de l'índex d'universos i el nom del territori al panell del mapa.
+- **H3** (400, de 34 a 48 px, 1,1): subseccions i blocs d'una fitxa ("Per què l'hem triat", "Els seus universos", "L'hotel en imatges" i els hotels relacionats), el nom d'una targeta d'hotel gran, els noms de les targetes d'univers de la home i el nom del territori al panell del mapa.
 - **H4** (400, de 26 a 32 px, 1,18): títols de bloc petits, com "Informació pràctica" o "La Guia Sojorn" sobre la llegenda de distintius, el nom d'un criteri o d'un univers en una llista i el nom d'una targeta d'hotel estàndard.
 - **H5** (Geist 500, 18 px, 1,45): títols funcionals dins de llistes i formularis.
 - **H6** (Geist 600, 16 px, 1,5): el títol funcional mínim.
@@ -279,7 +279,7 @@ Els camps s'alternen per blocs. A la home, la fotografia sobre bosc i el manifes
 ### Named Rules
 **La Regla de l'Aire.** Dues seccions mai no se separen amb menys de 96 px. Si una pantalla sembla buida, és correcte; si sembla plena, sobra contingut.
 
-**La Regla de la Línia.** Les divisions es fan amb una línia d'1 px (o amb espai), mai amb caixes, fons de targeta o ombres. Sobre paper la línia és oliva al 20%; sobre bosc, paper al 20%. Per defecte s'usa una sola línia per canvi de grup, no una a cada fila. L'excepció són les llistes d'entrades paral·leles que es llegeixen com un índex: la llista de criteris del manifest porta un Divider sobre cada fila i un de tancament sota l'última; l'índex d'universos, que és una graella, porta una línia sobre la llista, una sota cada cel·la i filets verticals només entre cel·les, sense marc tancat. A la fitxa d'hotel, les dades, la informació pràctica, els criteris i els universos porten una línia sobre la llista i una sota cada fila; la barra de filtres del directori porta una línia a dalt, una a baix i una entre grups.
+**La Regla de la Línia.** Les divisions es fan amb una línia d'1 px (o amb espai), mai amb caixes, fons de targeta o ombres. Sobre paper la línia és oliva al 20%; sobre bosc, paper al 20%. Per defecte s'usa una sola línia per canvi de grup, no una a cada fila. L'excepció són les llistes d'entrades paral·leles que es llegeixen com un índex: la llista de criteris del manifest porta un Divider sobre cada fila i un de tancament sota l'última; els universos de la home, en canvi, són quatre targetes amb marc d'1 px que giren (vegeu Índex d'universos), l'única excepció. A la fitxa d'hotel, les dades, la informació pràctica, els criteris i els universos porten una línia sobre la llista i una sota cada fila; la barra de filtres del directori porta una línia a dalt, una a baix i una entre grups.
 
 **La Regla del Filet entre Papers.** Dues seccions de paper consecutives se separen amb un Divider en color línia i l'espai `seccio` a banda i banda (el padding inferior de la secció anterior i un marge igual sota el filet). El canvi entre paper i bosc no porta filet: el canvi de camp ja és la divisió.
 
@@ -304,7 +304,7 @@ La fotografia en marc (el panell del mapa, les targetes d'hotel, la portada i la
 
 Angle recte absolut. L'escala de radis de Tailwind està eliminada del tema: `rounded-xl` i similars no generen CSS. Les vores són sempre d'1 px: en color línia sobre paper i en paper al 20% sobre bosc. El botó sobre bosc porta una vora de paper al 30% (2,5:1, decorativa: l'etiqueta ja identifica el control) que passa a paper al 70% en hover. Les línies són decoratives (1,34:1 sobre paper, 1,85:1 sobre bosc). El focus és un contorn d'1 px amb 4 px de separació, en terracota sobre paper i en paper sobre bosc.
 
-La cartografia manté l'1 px a qualsevol mida del mapa: tots els traços són non-scaling-stroke, amb unions arrodonides al vèrtex (no a la cantonada de cap element). Fora del mapa, l'única forma no rectangular és la marca ✦ dels distintius, una estrella de quatre puntes dibuixada a mà en SVG, no un caràcter tipogràfic.
+La cartografia manté l'1 px a qualsevol mida del mapa: tots els traços són non-scaling-stroke, amb unions arrodonides al vèrtex (no a la cantonada de cap element). Fora del mapa, l'única forma no rectangular és la branca d'olivera dels distintius, un dibuix vectorial del client en SVG, no un caràcter tipogràfic.
 
 ### Named Rules
 **La Regla de l'Angle Recte.** Radi 0 a botons, camps, imatges i contenidors. Una cantonada arrodonida trenca el sistema.
@@ -325,7 +325,7 @@ Una línia de guia: la marca a l'esquerra i la navegació a la dreta, sobre un f
 Rectangular, pla i tipogràfic: l'acció principal quan viu dins d'un camp bosc o sobre la fotografia. És un sol component (BotoBosc) per a la home i per al tancament de la fitxa.
 - **Forma:** angle recte (0 px) i vora d'1 px en paper al 30%.
 - **Color i mida:** fons bosc i text paper en Interfície (Geist 500, 15 px), en majúscules amb un tracking de 0,14em; padding de 16 px en vertical i 24 px en lateral, que passa a 32 px a partir de 640 px, on l'etiqueta es manté en una línia.
-- **Etiqueta:** l'usuari la va fixar entre claudàtors, `[ DESCOBREIX LA SELECCIÓ ]`; els claudàtors són decoratius i s'amaguen als lectors de pantalla. A la home salta a Catalunya (`#catalunya`) i entra amb l'obertura, amb 300 ms de retard. Al tancament de la fitxa, `[ VISITA LA WEB DE L'HOTEL ]`.
+- **Etiqueta:** sense claudàtors: `DESCOBREIX LA SELECCIÓ`. A la home salta a Catalunya (`#catalunya`) i entra amb l'obertura, amb 300 ms de retard. Al tancament de la fitxa, `VISITA LA WEB DE L'HOTEL`.
 - **Hover / Focus:** la vora passa a paper al 70% en 200 ms, i una línia d'1 px en paper creix d'esquerra a dreta sota l'etiqueta en 500 ms amb ease-sojorn. El focus és un contorn de paper d'1 px a 4 px i també fa créixer la línia.
 - **Variant exterior:** per als enllaços fora de Sojorn. S'obre en una pestanya nova (`target="_blank"`, `rel="noopener noreferrer"`) i ho anuncia als lectors de pantalla amb el text ocult "(s'obre en una pestanya nova)". El dibuix no canvia.
 
@@ -340,14 +340,14 @@ Rectangular, pla i tipogràfic: l'acció principal quan viu dins d'un camp bosc 
 - **Entre seccions:** el mateix Divider separa dues seccions de paper consecutives, segons La Regla del Filet entre Papers.
 
 ### Índex d'universos
-Un índex de llibre d'art: set cel·les ordenades per filets, sense marc ni aspecte de targeta.
-- **Graella:** a partir de 1024 px, 12 columnes sense separació en tres files de 8/4, 4/4/4 i 4/8; a partir de 768 px, 2 columnes, amb l'última cel·la ocupant-les totes dues; per sota, una sola columna.
-- **Filets:** 1 px en color línia: un sobre la llista, un sota cada cel·la i un a l'esquerra només entre cel·les d'una mateixa fila. Cap marc tancat.
-- **Cel·la:** 48 px de padding vertical, 56 px a partir de 768 px; cap al filet vertical, 32 px de padding lateral a 768 px i 40 px a 1024 px, i cap a l'exterior de la fila, cap. Nom en H3 (bosc) i descripció en Cos oliva (màxim 32ch). A les cel·les amples (8 columnes), nom i descripció van costat per costat en dues columnes alineades per la línia de base, separades 40 px; a les estretes s'apilen amb 16 px entre si.
-- **Hover:** només en dispositius amb punter (la variant hover de Tailwind v4 viu dins de `@media (hover: hover)`). Una línia d'1 px en oliva es dibuixa d'esquerra a dreta sobre el filet superior de la cel·la (scale-x, 280 ms d'entrada i 160 ms de sortida, ease-sojorn) i el nom puja 2 px amb els mateixos temps. Amb moviment reduït, la línia només es fon i el nom no es mou.
-- **Sense enllaç:** mentre no hi hagi pàgines d'univers, les cel·les no són enllaços i no porten cursor de punter.
-
-**La Regla dels Eixos.** A l'índex d'universos, els filets verticals només cauen sobre els eixos de les columnes 4 i 8. Una combinació de cel·les que obri un eix nou trenca la retícula.
+Quatre targetes en dues columnes i dues files, que giren per mostrar una fotografia. És l'única excepció a La Regla de la Línia: aquí sí hi ha targeta, però és un marc d'1 px sense fons, sense ombra i d'angle recte.
+- **Graella:** a partir de 768 px, 2 columnes amb 24 px de separació; per sota, una sola. Cada targeta fa 3:2 a partir de 1024 px i 304 px d'alçada per sota (l'alçada fixa evita que el text reculi en girar).
+- **Anvers:** marc d'1 px en color línia sobre paper, amb 32 px de padding (40 px a partir de 1024 px). A dalt, el nom en H3 (H2 a partir de 1280 px), en bosc. A baix, el lema en Entradeta en Geist negreta ("Menjar el territori") i, 12 px més avall, la descripció en Cos oliva (màxim 32ch, amb dues línies d'alçada reservades, de manera que els lemes queden a la mateixa altura a totes les targetes).
+- **Revers:** una fotografia de color natural amb foto-editorial, sense marc ni text, a tota la targeta. Sota la graella, una línia en Metadades oliva credita els fotògrafs.
+- **Gir:** rotació de 180° sobre l'eix vertical (rotateY) en 750 ms amb ease-gir, cubic-bezier(0.65, 0, 0.35, 1), la corba d'un moviment sobre la pantalla: arrenca i acaba suau. La perspectiva és de 1600 px. El hover recau sobre l'element fix i no sobre el que gira, de manera que el gir no fa parpellejar la zona sensible. En treure el ratolí, torna amb el mateix gest. Les dues cares són al DOM: el text sempre és llegible, també amb lector de pantalla.
+- **Tàctil:** sense hover, tocar la targeta la gira i tornar-hi la desgira. Només una targeta a la vegada.
+- **Moviment reduït:** cap gir; les cares s'intercanvien amb un fos de 200 ms.
+- **Sense enllaç:** mentre no hi hagi pàgines d'univers, les targetes no són enllaços i no porten cursor de punter.
 
 ### Mapa editorial
 Una il·lustració cartogràfica de revista: el territori es llegeix pel traç, mai pel color.
@@ -363,14 +363,14 @@ Una il·lustració cartogràfica de revista: el territori es llegeix pel traç, 
 
 ### Llegenda de distintius
 - **Estructura:** tres entrades en una llista de definicions al costat de "La Guia Sojorn" (H4, amb una línia en Metadades oliva de màxim 28ch, a 3 de 12 columnes a partir de 1024 px). A partir de 768 px, una fila de tres amb una línia a sobre i filets verticals només entre entrades (32 px de padding lateral, cap a l'exterior de la primera); per sota, una llista apilada amb una línia a sobre i una entre entrades. 32 px de padding vertical.
-- **Entrada:** la marca ✦, el nom en Interfície majúscula amb 0,14em de tracking, 16 px per sota, i una descripció curta en Cos oliva (màxim 30ch) 12 px més avall.
-- **Marca ✦ (MarcaDistintiu):** estrella de quatre puntes en SVG, de 12 px, repetida d'1 a 3 vegades amb 6 px entre còpies i oculta als lectors de pantalla, perquè el nom ja diu el nivell. Selection (1) i Signature (2) porten estrelles plenes de terracota; Icon (3) només en porta el contorn, el tractament discret, i afegeix la nota "Només per a casos molt especials." en Metadades.
-- **Sense nivells grisos:** no hi ha estrelles inactives ni en pedra; el nivell es compta pel nombre de marques.
+- **Entrada:** la branca d'olivera, el nom en Interfície majúscula amb 0,14em de tracking, 16 px per sota, i una descripció curta en Cos oliva (màxim 30ch) 12 px més avall.
+- **Branca d'olivera (MarcaDistintiu):** dibuix del client (`docs/references/motiu_vegetal_fons_transparent.svg`), un sol traçat sense fons amb el viewBox ajustat al dibuix (proporció 1,41:1). Color oliva. Repetida d'1 a 3 vegades amb 10 px entre còpies i oculta als lectors de pantalla, perquè el nom ja diu el nivell. Mida per context: 32 px d'alçada a la llegenda de la home i 20 px a les targetes, als filtres i a la fitxa de dades. Selection (1) i Signature (2) la porten plena; Icon (3) només en porta el contorn d'1 px (non-scaling-stroke), el tractament discret, i afegeix la nota "Només per a casos molt especials." en Metadades.
+- **Sense nivells grisos:** no hi ha branques inactives ni en pedra; el nivell es compta pel nombre de marques.
 
 ### Filtres del directori
 Un sumari de guia, no un formulari de cerca: tres línies de text entre filets.
 - **Estructura:** un formulari ("Filtra la selecció") amb una línia a dalt i una a baix i tres grups de botons d'opció (Territori, Univers, Distintiu) separats per una línia, amb 20 px de padding vertical. A partir de 768 px, cada grup és una fila de 12 columnes alineada per la línia de base: la llegenda en Metadades oliva a 2 columnes i les opcions a les 10 restants; per sota, la llegenda i les opcions s'apilen amb 8 px. El vocabulari surt de `lib/guia.ts`, la mateixa font que la home.
-- **Opcions:** el primer valor de cada grup és "Tots". Cada opció és una etiqueta en Interfície oliva amb 6 px de padding vertical, 24 px entre opcions i 4 px entre línies; el botó d'opció és ocult visualment i l'etiqueta és el control. Els distintius porten la marca ✦ en terracota, 8 px abans del nom curt (Selection, Signature, Icon) en majúscules amb 0,14em de tracking.
+- **Opcions:** el primer valor de cada grup és "Tots". Cada opció és una etiqueta en Interfície oliva amb 6 px de padding vertical, 24 px entre opcions i 4 px entre línies; el botó d'opció és ocult visualment i l'etiqueta és el control. Els distintius porten la branca d'olivera en terracota, 8 px abans del nom curt (Selection, Signature, Icon) en majúscules amb 0,14em de tracking.
 - **Estats:** en hover, bosc. L'opció triada és bosc amb un filet d'1 px de terracota sota l'etiqueta que creix des de l'esquerra en 200 ms amb ease-sojorn; amb moviment reduït apareix sense transició. El focus és el contorn terracota d'1 px a 4 px sobre l'etiqueta.
 - **Adreça:** cada canvi reescriu l'adreça amb només els filtres actius, sense afegir entrades a l'historial; el servidor llegeix els valors vàlids, de manera que una adreça filtrada es pot compartir i els enllaços del mapa i de la fitxa hi porten directament.
 - **Recompte:** 16 px sota la barra, en una fila d'alçada mínima de 32 px: "N hotels" a la dreta en Metadades oliva, anunciat als lectors de pantalla quan canvia. Si hi ha algun filtre actiu, "Esborra els filtres" a l'esquerra, en Metadades oliva subratllada amb 0,3em de separació, que passa a bosc en hover.
@@ -386,13 +386,13 @@ Un sumari de guia, no un formulari de cerca: tres línies de text entre filets.
 ### Targeta d'hotel
 Una entrada de guia: fotografia, filet, nom i frase. Sense fons, sense vora de caixa i sense ombra.
 - **Fotografia:** marc d'angle recte en 16:9 (horitzontal) o 3:4 (vertical), amb fons pedra-100 i `foto-editorial`. Per defecte, les grans són horitzontals i les estàndard verticals; els hotels relacionats de la fitxa són estàndard en 16:9.
-- **Cos:** 20 px sota la fotografia, una línia i 20 px de padding. A la primera fila, alineats per la línia de base i separats com a mínim 24 px, el nom (H3 a les grans, H4 a les estàndard; element h2 al directori i h3 als relacionats) i, a la dreta, la marca ✦ en terracota amb el nom del distintiu només per als lectors de pantalla. Sota el nom, 8 px, poble · comarca en Metadades oliva; 16 px més avall, la frase en Relat cursiva (màxim 40ch).
+- **Cos:** 20 px sota la fotografia, una línia i 20 px de padding. A la primera fila, alineats per la línia de base i separats com a mínim 24 px, el nom (H3 a les grans, H4 a les estàndard; element h2 al directori i h3 als relacionats) i, a la dreta, la branca d'olivera en terracota amb el nom del distintiu només per als lectors de pantalla. Sota el nom, 8 px, poble · comarca en Metadades oliva; 16 px més avall, la frase en Relat cursiva (màxim 40ch).
 - **Enllaç:** l'enllaç del nom s'estén sobre tota la targeta, que és clicable sencera.
 - **Hover:** només amb punter, el nom se subratlla (1 px, 0,18em de separació). És l'única resposta: la fotografia no s'escala, no es mou i no canvia de color. El focus és el contorn terracota sobre l'enllaç.
 
 ### Fitxa d'hotel
 El reportatge d'un hotel, amb l'ordre i la graella de Layout.
-- **Dades de capçalera:** una llista de definicions en Metadades amb tres files (Ubicació, Territori, Distintiu), cadascuna en dues columnes de 6,5 rem i la resta, amb 16 px de separació i 12 px de padding vertical, una línia a sobre de cada fila i una sota l'última. L'etiqueta és oliva i el valor, bosc. El territori és un enllaç subratllat al directori filtrat, que passa a oliva en hover. El distintiu porta la marca ✦ i, 12 px després, el nom complet en majúscules amb 0,14em de tracking, a la mida de Metadades de la llista.
+- **Dades de capçalera:** una llista de definicions en Metadades amb tres files (Ubicació, Territori, Distintiu), cadascuna en dues columnes de 6,5 rem i la resta, amb 16 px de separació i 12 px de padding vertical, una línia a sobre de cada fila i una sota l'última. L'etiqueta és oliva i el valor, bosc. El territori és un enllaç subratllat al directori filtrat, que passa a oliva en hover. El distintiu porta la branca d'olivera i, 12 px després, el nom complet en majúscules amb 0,14em de tracking, a la mida de Metadades de la llista.
 - **Portada:** fotografia en marc a tota l'amplada del contenidor amb `foto-editorial` i crèdit en Metadades oliva: "Fotografia provisional: autor (Unsplash)".
 - **L'Essència:** títol en H2 i, 40 px més avall, el relat en Relat romana (màxim 62ch, 24 px entre paràgrafs). 40 px sota el relat, la nota "Text d'exemple de la redacció de Sojorn" en Metadades oliva.
 - **Informació pràctica:** títol a escala H4 i, 24 px més avall, una llista de definicions amb una línia a sobre i una sota cada fila (Adreça, Telèfon, Correu, Web, Habitacions, Obert) en la mateixa composició de 6,5 rem: etiqueta en Metadades oliva i valor en cos. El telèfon i el correu són enllaços que se subratllen en hover; la web es mostra només com a domini. 32 px més avall, el botó sobre paper cap a la web de l'hotel i, 16 px per sota, la nota de prescriptor en Metadades oliva (màxim 36ch).
@@ -430,7 +430,7 @@ La pàgina de color que tanca el reportatge: la sortida cap a la web de l'hotel.
 
 **La Regla de l'Aparició.** El directori només es fon quan l'usuari canvia un filtre: mai en carregar la pàgina ni en arribar amb una adreça ja filtrada. És només opacitat, i la barra de filtres i el recompte no es mouen.
 
-**La Regla del Moviment Reduït.** Amb `prefers-reduced-motion: reduce`, animate-entrada val `none` i el contingut és visible des del primer moment. El desplaçament suau cap a les àncores només s'activa amb `no-preference`. No hi ha cap anul·lació global de durades: cada animació declara el seu estat reduït. Les respostes de color i opacitat es mantenen, i per això animate-aparicio, que és només opacitat, no canvia; la pujada del nom de l'univers desapareix, les línies que creixen (sota el botó sobre bosc i a la cel·la d'univers) es fonen en lloc de dibuixar-se i el filet de l'opció triada dels filtres apareix sense transició.
+**La Regla del Moviment Reduït.** Amb `prefers-reduced-motion: reduce`, animate-entrada val `none` i el contingut és visible des del primer moment. El desplaçament suau cap a les àncores només s'activa amb `no-preference`. No hi ha cap anul·lació global de durades: cada animació declara el seu estat reduït. Les respostes de color i opacitat es mantenen, i per això animate-aparicio, que és només opacitat, no canvia; la línia que creix sota el botó sobre bosc es fon en lloc de dibuixar-se, la targeta d'univers no gira i intercanvia les cares amb un fos de 200 ms i el filet de l'opció triada dels filtres apareix sense transició.
 
 ## Do's and Don'ts
 
@@ -438,13 +438,13 @@ La pàgina de color que tanca el reportatge: la sortida cap a la web de l'hotel.
 - **Do** fes servir `bg-paper` com a fons únic de pàgina i `text-bosc` com a tinta per defecte.
 - **Do** separa continguts amb `border-t` (el color de vora per defecte ja és oliva al 20%) o amb espai; sobre bosc, amb `border-paper/20`.
 - **Do** fes servir `<Divider/>` (amb `on="bosc"` sobre bosc) a la llista de criteris, una línia per fila i una de tancament, i entre dues seccions de paper consecutives, amb l'espai `seccio` a banda i banda.
-- **Do** a l'índex d'universos, posa una línia sobre la llista, una sota cada cel·la i filets verticals només entre cel·les, sobre els eixos de les columnes 4 i 8.
+- **Do** a la home, deixa els universos en quatre targetes de dues columnes que giren sobre si mateixes per mostrar una fotografia; el gir és només rotateY i mai canvia l'alçada de la targeta.
 - **Do** dona a cada secció `py-seccio` i reserva `py-seccio-amplia` per als moments de pausa.
 - **Do** limita el text de cos a `max-w-mesura` (65ch) i les entradetes a 40ch.
 - **Do** fes servir la cursiva de Spectral per a l'èmfasi i per a les entradetes.
 - **Do** fes servir `text-relat` només en Spectral: romana per al relat de la fitxa (màxim 62ch) i cursiva per a la frase de la targeta (màxim 40ch).
-- **Do** manté la terracota per a focus, enllaços actius, la marca ✦ dels distintius, la selecció del mapa (contorn i etiqueta) i el filet de l'opció triada dels filtres sobre paper.
-- **Do** escriu els noms dels distintius en majúscules amb 0,14em de tracking: en Interfície a la llegenda i als filtres, i a la mida de Metadades a la fitxa de dades. A la targeta només hi va la marca ✦, amb el nom per als lectors de pantalla.
+- **Do** manté la terracota per a focus, enllaços actius, la selecció del mapa (contorn i etiqueta) i el filet de l'opció triada dels filtres sobre paper.
+- **Do** escriu els noms dels distintius en majúscules amb 0,14em de tracking: en Interfície a la llegenda i als filtres, i a la mida de Metadades a la fitxa de dades. A la targeta només hi va la branca d'olivera, amb el nom per als lectors de pantalla.
 - **Do** dibuixa la cartografia amb traços d'1 px non-scaling-stroke en oliva (30% per a comarques, 45% per al límit) i posa el crèdit de l'ICGC visible sota el mapa.
 - **Do** dona a tot control interactiu nou un equivalent accessible de text, com les etiquetes del mapa, que són pestanyes, o els filtres, que són botons d'opció, i amaga el dibuix decoratiu als lectors de pantalla.
 - **Do** dins d'un camp bosc, fes servir paper per al text, `text-pedra-200` per al text secundari i `selection:bg-paper selection:text-bosc` a la secció; el focus en paper ja l'aplica la regla base de `bg-bosc`.
@@ -457,13 +457,13 @@ La pàgina de color que tanca el reportatge: la sortida cap a la web de l'hotel.
 - **Do** manté les transicions d'estat dels components interactius entre 120 i 280 ms amb ease-sojorn, i amb moviment reduït deixa-hi només opacitat i color.
 
 ### Don't:
-- **Don't** facis servir ombres, radis arrodonits, targetes amb fons ni icones decoratives. La marca ✦ no és una icona: és el segell de la guia.
+- **Don't** facis servir ombres, radis arrodonits, targetes amb fons ni icones decoratives. La branca d'olivera no és una icona: és el segell de la guia.
 - **Don't** afegeixis un mode fosc: un camp bosc és un bloc de color de la pàgina, no un tema.
 - **Don't** posis una etiqueta petita en majúscules sobre un titular; el titular parla sol. Les metadades (Empordà · Girona) van sota o al costat del nom, no com a avantsala.
 - **Don't** facis servir la terracota en superfícies grans ni sobre bosc, ni el pedra-500 per a text petit.
 - **Don't** omplis cap comarca ni cap territori del mapa amb color, ni en repòs ni en selecció.
 - **Don't** facis que sortir del mapa desfaci la selecció, ni afegeixis una llista de territoris al costat del mapa: la selecció del mapa es fa sobre el mateix mapa. Els filtres del directori són una altra pàgina.
-- **Don't** donis cursor de punter ni aspecte de targeta a elements que no enllacen, com les cel·les dels universos.
+- **Don't** donis cursor de punter a elements que no enllacen, com les targetes dels universos.
 - **Don't** representis nivells inactius dels distintius amb estrelles grises; el nivell es compta pel nombre de marques.
 - **Don't** reintroduïssis la paleta de colors per defecte de Tailwind (zinc, stone, etc.); no existeix al tema.
 - **Don't** barregis famílies dins d'un titular.

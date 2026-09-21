@@ -41,7 +41,7 @@ export default function Home() {
             SOJORN
           </h1>
           <p className="mt-6 animate-entrada font-serif text-entradeta italic [animation-delay:150ms]">
-            Dormir en un lloc. Viure un territori.
+            Dormir en un destí. Viure un territori.
           </p>
           <BotoBosc href="#catalunya" className="mt-12 animate-entrada [animation-delay:300ms]">
             Descobreix la selecció
@@ -62,14 +62,24 @@ export default function Home() {
             <p className="mt-10 font-serif text-entradeta italic">
               És una suma de territoris.
             </p>
-            <p className="mt-6 max-w-[42ch] text-pedra-200">
-              De paisatges que canvien en pocs quilòmetres. De pobles amb
-              història. De cuines que neixen de la terra. I també d&apos;hotels
-              que han decidit formar part d&apos;aquest paisatge.
+            <p className="mt-6 max-w-[42ch] font-bold">
+              Catalunya és una terra de contrastos. De paisatges que canvien,
+              de pobles que guarden històries, de gastronomia que parla de la
+              seva terra i de persones que mantenen viva una manera de fer.
             </p>
-            <p className="mt-6 max-w-[42ch]">
-              Sojorn neix per descobrir, seleccionar i connectar aquests llocs.
-              Hotels amb identitat, arrelats al seu entorn.
+            <p className="mt-6 max-w-[42ch] text-pedra-200">
+              Entre aquests paisatges hi ha hotels amb una identitat pròpia.
+              Llocs que no només acullen, sinó que formen part del territori
+              que els envolta.
+            </p>
+            <p className="mt-6 max-w-[42ch] font-bold">
+              Sojorn neix per descobrir-los, seleccionar-los i posar-los en
+              valor.
+            </p>
+            <p className="mt-6 max-w-[42ch] text-pedra-200">
+              Una selecció d&apos;hotels amb encant, escollits pel seu caràcter,
+              la seva hospitalitat i la seva manera d&apos;entendre i viure les
+              experiències basades en el territori català.
             </p>
           </div>
 
@@ -100,14 +110,27 @@ export default function Home() {
       <section id="guia" aria-labelledby="guia-titol">
         <div className="mx-auto max-w-pagina px-marge py-seccio">
           <h2 id="guia-titol" className="max-w-[20ch]">
-            No volem ser una llista d&apos;hotels.{" "}
-            <em>Volem ser una referència.</em>
+            No som una llista d&apos;hotels.{" "}
+            <em>Som criteri i referència.</em>
           </h2>
-          <p className="mt-8 max-w-[46ch] text-oliva">
-            En un món on tot es pot reservar, comparar i valorar, creiem que
-            encara hi ha espai per al criteri. Per això Sojorn no busca tenir la
-            selecció més gran. Busca tenir la selecció adequada.
-          </p>
+          <div className="mt-8 max-w-[46ch] space-y-4 text-oliva">
+            <p>
+              En un món on tot es pot comparar, creiem que encara hi ha lloc per
+              al criteri.
+            </p>
+            <p>
+              Sojorn neix precisament per això: per mirar, descobrir i
+              seleccionar amb criteri.
+            </p>
+            <p>
+              No volem reunir-ho tot. Volem reunir allò que mereix ser
+              descobert.
+            </p>
+            <p>
+              Hotels amb identitat, arrels i una manera pròpia de viure el
+              territori.
+            </p>
+          </div>
 
           <div className="mt-24 grid grid-cols-12 gap-x-6 gap-y-10">
             <div className="col-span-12 lg:col-span-3">
@@ -128,7 +151,8 @@ export default function Home() {
                       <MarcaDistintiu
                         nivell={distintiu.nivell}
                         contorn={excepcional}
-                        className="text-terracota"
+                        mida="h-8"
+                        className="text-oliva"
                       />
                       <span className="mt-4 block text-ui tracking-[0.14em] uppercase">
                         {distintiu.nom}
@@ -171,6 +195,9 @@ export default function Home() {
         <div className="mx-auto max-w-pagina px-marge pb-seccio">
           <Divider className="mb-seccio" />
           <h2 id="universos-titol">Els universos</h2>
+          <p className="mt-6 font-serif text-entradeta italic">
+            Maneres de viure el territori
+          </p>
           <div className="mt-16">
             <IndexUniversos />
           </div>

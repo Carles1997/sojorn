@@ -95,6 +95,8 @@
 
   /* Moviment */
   --ease-sojorn: cubic-bezier(0.16, 1, 0.3, 1);
+  /* Gir de les targetes d'univers: un moviment sobre a la pantalla, amb inici i final suaus. */
+  --ease-gir: cubic-bezier(0.65, 0, 0.35, 1);
   --animate-entrada: entrada 900ms var(--ease-sojorn) both;
   /* Recomposició del directori en canviar un filtre: només opacitat. */
   --animate-aparicio: aparicio 280ms var(--ease-sojorn) both;
@@ -130,6 +132,76 @@
    més de contrast i un punt de calidesa que tempera els cels cian sense virar al marró. */
 @utility foto-editorial {
   filter: contrast(1.1) sepia(0.1);
+}
+
+@layer components {
+  /* Targeta que gira sobre si mateixa (universos de la home). L'element .carta és fix i és el que rep el
+     hover, de manera que el gir no fa parpellejar la zona sensible. */
+  .carta {
+    perspective: 1600px;
+  }
+
+  .carta-interior {
+    transform-style: preserve-3d;
+    transition: transform 750ms var(--ease-gir);
+  }
+
+  .carta-cara {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+  }
+
+  .carta-revers {
+    transform: rotateY(180deg);
+  }
+
+  @media (hover: hover) {
+    .carta:hover .carta-interior {
+      transform: rotateY(180deg);
+    }
+  }
+
+  .carta[data-girat="true"] .carta-interior {
+    transform: rotateY(180deg);
+  }
+
+  /* Moviment reduït: cap gir; les cares s'intercanvien amb un fos. */
+  @media (prefers-reduced-motion: reduce) {
+    .carta-interior,
+    .carta:hover .carta-interior,
+    .carta[data-girat="true"] .carta-interior {
+      transform: none;
+      transition: none;
+    }
+
+    .carta-cara {
+      transition: opacity 200ms var(--ease-sojorn);
+    }
+
+    .carta-revers {
+      transform: none;
+      opacity: 0;
+    }
+
+    .carta[data-girat="true"] .carta-revers {
+      opacity: 1;
+    }
+
+    .carta[data-girat="true"] .carta-anvers {
+      opacity: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) and (hover: hover) {
+    .carta:hover .carta-revers {
+      opacity: 1;
+    }
+
+    .carta:hover .carta-anvers {
+      opacity: 0;
+    }
+  }
 }
 
 @layer base {

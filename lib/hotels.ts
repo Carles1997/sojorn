@@ -74,7 +74,7 @@ export const HOTELS: Hotel[] = [
       { id: "autenticitat", nota: "La feina del celler marca el ritme de l'estada, no un programa pensat per a visitants." },
       { id: "compromis", nota: "Cultiu ecològic, pedra seca restaurada i producte de la comarca a la taula." },
     ],
-    universos: ["la-terra", "la-taula", "el-paisatge"],
+    universos: ["la-taula", "el-cami"],
     portada: foto(
       "photo-1767034239002-186c18d67b9b",
       "GyT8fcg72Qk",
@@ -123,7 +123,7 @@ export const HOTELS: Hotel[] = [
       { id: "hospitalitat", nota: "Els amfitrions preparen cada sortida amb els hostes, com qui recomana un camí a un amic." },
       { id: "identitat", nota: "Vuit habitacions, cap televisor i una llar de foc que fa de sala d'estar." },
     ],
-    universos: ["el-cami", "el-silenci", "el-paisatge"],
+    universos: ["el-cami", "la-historia"],
     portada: foto(
       "photo-1680889353087-054c987bba00",
       "ob2B4SifgoE",
@@ -172,7 +172,7 @@ export const HOTELS: Hotel[] = [
       { id: "excellencia", nota: "Restauració feta amb artesans de la comarca i un servei atent a cada detall." },
       { id: "territori", nota: "Producte de l'Empordà i del Baix Ter a la taula, amb nom i procedència." },
     ],
-    universos: ["la-historia", "el-romanticisme", "la-taula"],
+    universos: ["la-historia", "la-taula"],
     portada: foto(
       "photo-1722009930817-12b6785aa9da",
       "bfMQHeOjAOk",
@@ -232,7 +232,7 @@ export const HOTELS: Hotel[] = [
       { id: "hospitalitat", nota: "Cada estada s'acorda abans amb els hostes, del menú a les excursions." },
       { id: "compromis", nota: "Energia renovable, ramaderia de la vall i una arquitectura que no altera el paisatge." },
     ],
-    universos: ["el-silenci", "la-taula", "el-romanticisme"],
+    universos: ["la-taula", "la-familia"],
     portada: foto(
       "photo-1590384107202-7fa9192e19bd",
       "AZ6UnwJiAO4",
@@ -281,7 +281,7 @@ export const HOTELS: Hotel[] = [
       { id: "autenticitat", nota: "Receptes de la Garrotxa fetes amb el producte dels veïns." },
       { id: "hospitalitat", nota: "Una casa familiar on els amfitrions coneixen cada racó de la comarca." },
     ],
-    universos: ["el-silenci", "el-cami", "la-terra"],
+    universos: ["el-cami", "la-taula"],
     portada: foto(
       "photo-1755728864075-b13c44157d81",
       "Sg4pIJBfLhE",
@@ -341,7 +341,7 @@ export const HOTELS: Hotel[] = [
       { id: "compromis", nota: "Un allotjament de baix impacte dins d'un espai natural protegit." },
       { id: "autenticitat", nota: "Sortides guiades per gent que viu i treballa el delta." },
     ],
-    universos: ["el-paisatge", "el-silenci"],
+    universos: ["el-cami", "la-familia"],
     portada: foto("photo-1650964942113-2f09d93c8263", "X2EWH3WornU", "Colin + Meg", "Casa blanca enmig d'un aiguamoll."),
     galeria: [
       foto("photo-1569878726479-3db8ae5b792f", "nNMtkGE7_Tg", "Santiago Lacarta", "Flamencs a l'aigua del delta de l'Ebre."),
@@ -380,7 +380,7 @@ export const HOTELS: Hotel[] = [
       { id: "territori", nota: "El Cap de Creus a peu des de la porta de casa." },
       { id: "hospitalitat", nota: "Recomanacions personals que fan de l'estada una manera de viure el poble." },
     ],
-    universos: ["el-paisatge", "el-romanticisme"],
+    universos: ["el-cami", "la-familia"],
     portada: foto(
       "photo-1751240261891-c0176aff0592",
       "FRnm7ggPjSI",
@@ -434,7 +434,7 @@ export const HOTELS: Hotel[] = [
       { id: "territori", nota: "La cultura del vi i del cava del Penedès, explicada per qui la fa." },
       { id: "compromis", nota: "Vinya en conversió ecològica i proveïdors del mateix territori." },
     ],
-    universos: ["la-terra", "la-taula"],
+    universos: ["la-taula", "la-familia"],
     portada: foto(
       "photo-1707391032355-b86fb9cc4af6",
       "SnFyMiDhSSs",

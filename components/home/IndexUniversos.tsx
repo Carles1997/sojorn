@@ -1,55 +1,53 @@
-// Índex editorial dels set universos. A escriptori, graella de 12 columnes en 8/4 · 4/4/4 · 4/8:
-// els filets verticals cauen sempre sobre els mateixos eixos (columnes 4 i 8), com la retícula
-// d'un índex de llibre. Les cel·les amples posen nom i descripció costat per costat, amb la
-// descripció alineada amb el text de les cel·les estretes (eix + 40 px).
-// Les cel·les no són enllaços mentre no hi hagi pàgines d'univers: micro-interacció subtil,
-// sense cursor d'enllaç. Els noms i textos venen de lib/guia; aquí només hi ha la retícula, en el
-// mateix ordre.
-import { UNIVERSOS } from "@/lib/guia";
+"use client";
 
-const CELLES: ReadonlyArray<{ cella: string; ampla: string | null }> = [
-  // La Taula. Cel·la que comença a la vora esquerra: la descripció salta l'eix i els 40 px de marge.
-  { cella: "md:pr-8 lg:col-span-8 lg:pr-10", ampla: "lg:pl-10" },
-  // El Paisatge
-  { cella: "md:border-l md:pl-8 lg:col-span-4 lg:pl-10", ampla: null },
-  // La Història
-  { cella: "md:pr-8 lg:col-span-4 lg:pr-10", ampla: null },
-  // El Camí
-  { cella: "md:border-l md:pl-8 lg:col-span-4 lg:px-10", ampla: null },
-  // El Silenci
-  { cella: "md:pr-8 lg:col-span-4 lg:border-l lg:pl-10 lg:pr-0", ampla: null },
-  // El Romanticisme
-  { cella: "md:border-l md:pl-8 lg:col-span-4 lg:border-l-0 lg:pl-0 lg:pr-10", ampla: null },
-  // La Terra. Cel·la que comença a l'eix 4: el padding de la cel·la ja aporta els 40 px.
-  { cella: "md:col-span-2 lg:col-span-8 lg:border-l lg:pl-10", ampla: "lg:pl-0" },
-];
+import Image from "next/image";
+import { useState } from "react";
+import { UNIVERSOS, type UniversId } from "@/lib/guia";
 
+// Els quatre universos, en dues columnes i dues files. Cada targeta gira sobre si mateixa en passar-hi
+// el ratolí i mostra una fotografia; en treure'l, torna al text amb el mateix gest. El gir és CSS pur
+// (`.carta`, a globals.css) i cau a un fos suau amb moviment reduït. En pantalla tàctil no hi ha
+// hover: tocar la targeta la gira i tornar-hi la desgira. Les targetes no són enllaços, així que no
+// porten cursor de mà; totes dues cares són al DOM, de manera que el text sempre és llegible.
 export function IndexUniversos() {
+  const [girat, setGirat] = useState<UniversId | null>(null);
+  const autors = [...new Set(UNIVERSOS.map((u) => u.imatge.autor))].join(", ");
+
   return (
-    <ul className="grid grid-cols-1 border-t md:grid-cols-2 lg:grid-cols-12">
-      {UNIVERSOS.map((dades, index) => {
-        const univers = { ...dades, ...CELLES[index] };
-        return (
-        <li key={univers.id} className={`group relative border-b py-12 md:py-14 ${univers.cella}`}>
-          <span
-            aria-hidden="true"
-            className="absolute inset-x-0 -top-px h-px origin-left scale-x-0 bg-oliva transition-transform duration-[160ms] ease-sojorn group-hover:scale-x-100 group-hover:duration-[280ms] motion-reduce:scale-x-100 motion-reduce:opacity-0 motion-reduce:transition-opacity motion-reduce:group-hover:opacity-100"
-          />
-          <div
-            className={
-              univers.ampla ? "lg:grid lg:grid-cols-[calc(50%+1.25rem)_1fr] lg:items-baseline" : ""
-            }
-          >
-            <h3 className="transition-transform duration-[160ms] ease-sojorn group-hover:-translate-y-0.5 group-hover:duration-[280ms] motion-reduce:group-hover:translate-y-0">
-              {univers.nom}
-            </h3>
-            <p className={`mt-4 max-w-[32ch] text-oliva ${univers.ampla ? `lg:mt-0 ${univers.ampla}` : ""}`}>
-              {univers.text}
-            </p>
-          </div>
-        </li>
-        );
-      })}
-    </ul>
+    <div>
+      <ul className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        {UNIVERSOS.map((univers) => (
+          <li key={univers.id}>
+            <div
+              className="carta relative h-[19rem] lg:aspect-[3/2] lg:h-auto"
+              data-girat={girat === univers.id}
+              onPointerUp={(event) => {
+                if (event.pointerType === "touch") setGirat((actual) => (actual === univers.id ? null : univers.id));
+              }}
+            >
+              <div className="carta-interior absolute inset-0">
+                <div className="carta-cara carta-anvers flex flex-col justify-between border bg-paper p-8 lg:p-10">
+                  <h3 className="text-h3 xl:text-h2">{univers.nom}</h3>
+                  <div>
+                    <p className="text-entradeta font-bold">{univers.lema}</p>
+                    <p className="mt-3 min-h-[3.4em] max-w-[32ch] text-oliva">{univers.text}</p>
+                  </div>
+                </div>
+                <div className="carta-cara carta-revers overflow-hidden bg-pedra-100">
+                  <Image
+                    src={univers.imatge.src}
+                    alt={univers.imatge.alt}
+                    fill
+                    sizes="(min-width: 1440px) 643px, (min-width: 768px) 50vw, 100vw"
+                    className="foto-editorial object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ul>
+      <p className="mt-6 text-meta text-oliva">Fotografies provisionals: {autors} (Unsplash)</p>
+    </div>
   );
 }

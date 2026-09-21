@@ -137,7 +137,7 @@ export function DirectoriHotels({ hotels, inicials }: DirectoriHotelsProps) {
             valor: d.id,
             etiqueta: d.curt,
             majuscules: true,
-            marca: <MarcaDistintiu nivell={d.nivell} contorn={d.id === "icon"} className="text-terracota" />,
+            marca: <MarcaDistintiu nivell={d.nivell} contorn={d.id === "icon"} className="text-oliva" />,
           }))}
           valor={filtres.distintiu}
           onCanvi={(distintiu) => aplica({ ...filtres, distintiu })}
